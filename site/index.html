@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tyrien Jones — Portfolio</title>
+<style>
+  :root{
+    --ink:#1c1c1a;
+    --muted:#5a564e;
+    --faint:#8a857a;
+    --line:#dcd8cf;
+    --accent:#9a5b2c;
+    --bg:#ffffff;
+    --serif:"Charter","Iowan Old Style","Palatino Linotype","Palatino","Georgia","Times New Roman",serif;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 40px 96px;
+  }
+
+  /* ---------- Cover ---------- */
+  .cover{
+    padding-bottom:30px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:44px;
+  }
+  .name{
+    font-size:52px;
+    line-height:1.04;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+  .pitch{
+    font-size:23px;
+    line-height:1.4;
+    font-weight:400;
+    color:var(--ink);
+    margin:0 0 26px;
+    padding-left:20px;
+    border-left:3px solid var(--accent);
+  }
+  .contact{
+    font-size:15px;
+    color:var(--muted);
+    letter-spacing:0.02em;
+    margin:0;
+  }
+  .contact a{ color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); }
+  .contact a:hover{ color:var(--accent); }
+  .sep{ color:var(--faint); padding:0 8px; }
+
+  /* ---------- Sections ---------- */
+  section{ margin-bottom:46px; }
+
+  h2{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-weight:700;
+    color:var(--accent);
+    margin:0 0 20px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+    break-after:avoid; page-break-after:avoid;
+  }
+
+  h2.big{
+    font-size:15px;
+  }
+
+  p{ margin:0 0 16px; }
+  p.lead{ font-size:20px; line-height:1.5; }
+
+  .muted{ color:var(--muted); }
+  em{ color:var(--muted); }
+
+  strong{ font-weight:700; }
+
+  a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
+
+  code{
+    font-family:"SFMono-Regular","Consolas","Liberation Mono","Menlo",monospace;
+    font-size:0.82em;
+    background:#f3f1ec;
+    padding:1px 5px;
+    border-radius:3px;
+    color:#3a372f;
+  }
+
+  /* ---------- Lists ---------- */
+  ul{ margin:0 0 18px; padding:0; list-style:none; }
+  ul li{
+    position:relative;
+    padding-left:22px;
+    margin-bottom:12px;
+  }
+  ul li::before{
+    content:"";
+    position:absolute;
+    left:2px; top:0.62em;
+    width:6px; height:6px;
+    background:var(--accent);
+  }
+
+  /* ---------- Project blocks ---------- */
+  .project{
+    margin-bottom:34px;
+    padding-left:18px;
+    border-left:2px solid var(--line);
+  }
+  .project h3{
+    font-size:25px;
+    font-weight:700;
+    line-height:1.2;
+    margin:0 0 4px;
+    break-after:avoid; page-break-after:avoid;
+  }
+  .status{
+    font-style:italic;
+    color:var(--muted);
+    font-size:16px;
+    margin:0 0 16px;
+  }
+  .project p{ margin:0 0 13px; }
+  .label{ font-weight:700; }
+  .techline{ font-style:italic; color:var(--muted); font-size:16px; margin-top:14px; }
+
+  .compact p{ margin:0 0 18px; }
+  .compact .label{ font-weight:700; }
+
+  blockquote{
+    margin:16px 0;
+    padding:4px 0 4px 18px;
+    border-left:3px solid var(--accent);
+    font-style:italic;
+    color:var(--muted);
+  }
+  blockquote p{ margin:0; }
+
+  /* ---------- Tables ---------- */
+  .tablewrap{ margin:0 0 18px; }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:15.5px;
+    line-height:1.45;
+  }
+  thead{ display:table-header-group; }
+  th{
+    text-align:left;
+    vertical-align:bottom;
+    font-weight:700;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--accent);
+    padding:0 14px 8px 0;
+    border-bottom:2px solid var(--accent);
+  }
+  td{
+    vertical-align:top;
+    padding:10px 14px 10px 0;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  tr{ break-inside:avoid; page-break-inside:avoid; }
+  td:last-child, th:last-child{ padding-right:0; }
+
+  /* ---------- Closing ---------- */
+  .closing-contact{
+    margin-top:10px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:16px;
+    color:var(--muted);
+  }
+  .closing-contact strong{ color:var(--ink); }
+  .closing-contact a{ color:var(--muted); border-bottom-color:var(--line); }
+
+  /* ---------- Print ---------- */
+  @page{ margin:18mm 16mm; }
+
+  @media print{
+    body{ font-size:10.8pt; line-height:1.5; }
+    .page{ max-width:none; margin:0; padding:0; }
+    .name{ font-size:30pt; }
+    .pitch{ font-size:14pt; }
+    .project h3{ font-size:15pt; }
+    p.lead{ font-size:12.5pt; }
+    h2{ font-size:10pt; }
+    .project, ul li, .compact p, blockquote, .tablewrap{ break-inside:avoid; page-break-inside:avoid; }
+    a{ color:var(--ink); }
+    code{ background:#f0eee9; }
+    section{ margin-bottom:26px; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="cover">
+    <h1 class="name">Tyrien Jones</h1>
+    <p class="pitch">I run AI agents like a crew. I&rsquo;m the foreman. They do the work &mdash; I call the shots and catch the mistakes.</p>
+    <p class="contact">Geraldton, Western Australia <span class="sep">&middot;</span> <a href="mailto:tyrienjones@gmail.com">tyrienjones@gmail.com</a> <span class="sep">&middot;</span> GitHub: <a href="https://github.com/tyrienjones-tech">tyrienjones-tech</a></p>
+  </header>
+
+  <section>
+    <h2>Who I am, and how I work</h2>
+    <p>I started writing code in February 2026. Before that I&rsquo;d never written a line.</p>
+    <p>I didn&rsquo;t come up through a computer science degree, a bootcamp, or a tech job. I came up on the tools &mdash; mining, fishing, hospitality, retail, farming. Years on the frontline. I&rsquo;ve seen how real businesses actually run, how a crew actually works, how a foreman keeps a job moving, and how things break when nobody&rsquo;s paying attention.</p>
+    <p>Three months after my first line of code, here&rsquo;s where I am: a working hardware-health tool I use on my own machine every single day, a multi-agent AI safety system, a desktop control-plane app, an audit on someone else&rsquo;s codebase, and a stack of earlier projects behind it &mdash; some finished, some half-built, all dated. I&rsquo;ll show you the dates. Nothing here is dressed up.</p>
+    <p>Here&rsquo;s the part that actually matters, and it&rsquo;s the thing I&rsquo;m selling.</p>
+    <p>I run AI agents the way I used to run crews. I treat them like employees. They&rsquo;re accelerators, not replacements. I&rsquo;m still the one steering, still the one catching their mistakes, still the one signing off before anything ships. The agents themselves are off the shelf &mdash; Anthropic&rsquo;s. What&rsquo;s mine is the way I run them: I give each one a name, a narrow job, a written role prompt, and a checkpoint it can&rsquo;t skip, and I keep myself in the loop as the final call. I&rsquo;ve done that across six different projects. It&rsquo;s not a slogan &mdash; it&rsquo;s prompt files and workflow rules sitting in folders on my machine. I&rsquo;ll show you those too.</p>
+    <p>A client hiring me isn&rsquo;t hiring a junior coder catching up to other juniors. They&rsquo;re hiring an operator who knows how to direct AI work and has three months of receipts.</p>
+  </section>
+
+  <section>
+    <h2>Yes, I used AI to make this. That&rsquo;s the point.</h2>
+    <p>Someone&rsquo;s going to ask whether I really made this myself, or whether the AI did it. It&rsquo;s the wrong question, so I&rsquo;ll put the answer up front.</p>
+    <p>I used AI to build this page. I use AI on everything I can. And I read every word, checked every claim, and signed off on all of it &mdash; the same way I do with code, the same way a foreman signs off on a crew&rsquo;s work before it leaves the site. That&rsquo;s not hiding behind a tool. That&rsquo;s the job. The skill was never typing every character myself. The skill is directing the work, catching what&rsquo;s wrong before it ships, and standing behind what goes out the door.</p>
+    <p>I call it agentic living: use the best tools wherever they help, and stay the one in charge. If you want someone who refuses to touch AI so he can call himself pure, that&rsquo;s not me. If you want someone who uses it hard and still owns every line &mdash; that&rsquo;s exactly me. This page is the proof of it. I made it the way I&rsquo;d make yours.</p>
+  </section>
+
+  <section>
+    <h2>The rules I run the crew under</h2>
+    <p>These aren&rsquo;t theory. They came from real jobs where something went wrong and I wrote down the lesson so it wouldn&rsquo;t happen twice.</p>
+    <ul>
+      <li><strong>Working version first, polish second.</strong> Ship the plain, mechanical, operator-checked version first. Make it nice after it works.</li>
+      <li><strong>One thing at a time.</strong> On staged work, I stop between batches and wait for the go-ahead. I don&rsquo;t let an agent run straight through, even on a clean job.</li>
+      <li><strong>Test the fix against real data before I write it.</strong> For any non-trivial bug, I replay it against what&rsquo;s actually on disk, check the data flow, and stress the design &mdash; before a line of the fix gets written.</li>
+      <li><strong>Five failed fixes means the problem isn&rsquo;t the code.</strong> If the same fix keeps not working, the thing I think is broken isn&rsquo;t the thing that&rsquo;s broken. I step back instead of swinging again.</li>
+      <li><strong>Hostile-input test before &ldquo;done.&rdquo;</strong> Anywhere a user or a file can put text into the system, I throw bad input at it on purpose before I call it shipped.</li>
+      <li><strong>Say up front whether a file is safe to delete.</strong> Every scratch file gets that call made out loud, so nothing important goes in the bin by accident.</li>
+      <li><strong>Write it down so the next person can pick it up cold.</strong> Human or agent. Handover docs, current-state files, decision logs, audit trails. The next person on the job shouldn&rsquo;t have to ring me to start.</li>
+    </ul>
+    <p>If you&rsquo;ve worked a site, you&rsquo;ll recognise the shape of all of that. Method statements, sign-offs, RFIs when you&rsquo;re blocked, a checkpoint you can&rsquo;t skip. I run software the same way.</p>
+  </section>
+
+  <section>
+    <h2 class="big">Featured work</h2>
+    <p>I picked three to show in full, then two more I&rsquo;m running right now. I&rsquo;ve split every one the same way, so the lines are clear and you can scan it:</p>
+    <ul>
+      <li><strong>The job</strong> &mdash; what it is, in plain terms.</li>
+      <li><strong>What&rsquo;s mine</strong> &mdash; the part I built.</li>
+      <li><strong>What I wired in</strong> &mdash; other people&rsquo;s tools I integrated. Not my code. I pick them, read the docs, pin a version that works, and write the glue.</li>
+      <li><strong>How I ran it</strong> &mdash; the agents and the checkpoints.</li>
+      <li><strong>Why it counts</strong> &mdash; what it proves I can do for you.</li>
+    </ul>
+    <p>One thing that pattern makes obvious: the projects aren&rsquo;t all the same kind of work. PC_HEALTH is mostly wiring good tools together. ECO is mostly my own code. L.I.LY is both. That&rsquo;s the range.</p>
+    <p>PC_HEALTH leads because it&rsquo;s finished and I use it every day.</p>
+
+    <div class="project">
+      <h3>PC_HEALTH &mdash; a longevity monitor for Windows PCs</h3>
+      <p class="status">Finished. In daily use on my own machine. MIT licensed.</p>
+      <p>This one&rsquo;s smaller and looser than L.I.LY, and that&rsquo;s on purpose &mdash; a focused tool for one clean problem, not a months-long build. Different jobs need different shapes.</p>
+      <p><span class="label">The job.</span> Watch the health of a Windows PC over time &mdash; drive wear, temperatures, GPU, and system errors &mdash; and keep a timestamped record so you can see trouble coming before a drive dies on you. Read-only by design. It never writes to firmware, never phones home, never sends your data anywhere.</p>
+      <p><span class="label">What&rsquo;s mine.</span> The layer that sits on top of the sensors: the part that polls four separate sources on a sensible schedule, decides what counts as healthy versus worrying, writes clean timestamped JSON snapshots, and &mdash; the key piece &mdash; hands all of it to an AI through an MCP server with five typed, read-only tools (<code>get_current_health</code>, <code>get_recent_live</code>, <code>get_smart_history</code>, <code>get_recent_events</code>, <code>list_drives</code>). I also wrote the packaging and the docs that ship with it &mdash; a README that walks setup, AI integration, architecture, and dependency versions, plus a documented thresholds file for CPU and drive cutoffs with examples for per-model overrides. Docs built along the way, not bolted on.</p>
+      <p><span class="label">What I wired in.</span> The actual readings come from other people&rsquo;s open-source tools, not mine: LibreHardwareMonitor reads the CPU, GPU, and board sensors; smartmontools (<code>smartctl</code>) reads drive SMART data; <code>nvidia-smi</code> reads the GPU; the Windows Event Log handles system errors; and the whole thing speaks the Model Context Protocol (MCP). I didn&rsquo;t build a hardware monitor. I built the thing that turns four separate hardware tools into one clean stream an AI can read.</p>
+      <p><span class="label">How I ran it.</span> A solo build, operator-directed, AI-assisted under the rules above &mdash; read-only chosen on purpose, hostile-input tested, every dependency and version written down before I called it shipped.</p>
+      <p><span class="label">Why it counts.</span> I can ship working software end-to-end on a real stack, with clean separation between the readers, the aggregator, and the server. An honest README that lists every dependency. The right boundaries picked on purpose. Real software a client can run today.</p>
+      <p class="techline">Python 3.11+, on top of LibreHardwareMonitor, smartmontools, nvidia-smi, the Windows Event Log, and MCP. &nbsp; GitHub: <a href="https://github.com/tyrienjones-tech/PC_HEALTH_MCP">github.com/tyrienjones-tech/PC_HEALTH_MCP</a></p>
+    </div>
+
+    <div class="project">
+      <h3>L.I.LY &mdash; a personal AI stack with a real safety crew</h3>
+      <p class="status">v0.9. About three months of continuous work. 139 unit tests passing.</p>
+      <p><span class="label">The job.</span> A personal AI system that runs local. I don&rsquo;t call it a chatbot, a persona, or a character &mdash; I treat it as its own category, what I call an AP (Artificial Person). It has voice, memory across sessions, and a safety crew watching it. The audio stays on my PC and my phone, and nowhere else.</p>
+      <p><span class="label">What&rsquo;s mine.</span> The whole thing, top to bottom &mdash; the server, the web interface, the ledgers, and the glue between them. The internal safety crew is three named agents (WARD and KEEP, with a third called GATE planned). WARD itself runs in three tiers: a deterministic floor with rules that can&rsquo;t be talked around (the rule file is hash-locked, so tampering gets caught), a faster classifier above that, and a heavier interpreter on top for the hard calls. The core systems &mdash; capture, long-term memory, voice handling, journaling, observation, and mid-turn guidance &mdash; are mine too, built as separate pieces that work as one.</p>
+      <p><span class="label">What I wired in.</span> The voice runs on XTTS-v2, faster-whisper, and silero-vad &mdash; other people&rsquo;s machine-learning models &mdash; on PyTorch with CUDA. Phone access goes over Tailscale so it never leaves my own network. The encrypted backups use Restic. The AI calls go to Anthropic&rsquo;s API. None of those are my code. One piece of integration discipline worth pointing at: one voice library breaks on a newer version of another dependency, so I pin it on purpose and I wrote down why &mdash; the kind of thing that bites you six months later if nobody recorded it.</p>
+      <p><span class="label">How I ran it.</span> L.I.LY isn&rsquo;t only the product &mdash; it&rsquo;s the workspace I work in. I set up the structure inside it the way you&rsquo;d lay out a job site: a shared folder split (one side for design docs, plans, audits, and handovers; the other for live code), continuity rules so a fresh session can pick up cold from where the last one stopped, decision logs, and a memory layer for the development work itself. That&rsquo;s the part that lets a three-month build hold together instead of unravelling every session. The features ship in staged batches with hostile-review gates between them, not in one run. The safety-hardening sweep that left 139 tests passing was the last batch on top of all that.</p>
+      <p><span class="label">Why it counts.</span> I can carry a long, architectural build over months without it falling apart, stand up a genuine multi-agent safety system, and integrate a messy multi-tool stack while keeping the versions straight.</p>
+      <p class="techline">Python (FastAPI) and a web interface I built, integrating Anthropic&rsquo;s API, XTTS-v2, faster-whisper, silero-vad, PyTorch + CUDA, Tailscale, and Restic.</p>
+    </div>
+
+    <div class="project">
+      <h3>ECO &mdash; a control plane for running a crew of AI agents on long, complex builds</h3>
+      <p class="status">My biggest project, and the one I&rsquo;m proudest of. In active development since March 2026 &mdash; 267 commits deep, 661 Rust tests passing. It&rsquo;s not finished, and I&rsquo;m not going to pretend it is. That&rsquo;s the point of putting it here.</p>
+      <p><span class="label">The job.</span> When a build runs long and the work gets complex, it goes sideways in the same few ways every time. Different AI models end up touching the same code &mdash; ChatGPT, Claude across versions, Sonnet, the agents I&rsquo;ve named &mdash; and it still has to read like one hand wrote it. The truth about where things stand gets scattered across chat windows that vanish the moment you close them. And the second you let the agents run themselves, you lose the thread on what was actually checked. ECO is the control plane that keeps all of that in line: one verified place where the truth lives, the human as the final word on every commit, every decision, every risk, verification proofs treated as real artifacts with their freshness tracked, and a bounded run &rarr; write-back &rarr; re-run &rarr; mark-verified lifecycle that&rsquo;s approval-gated, not turned loose. No off-the-shelf tool does this. That&rsquo;s why I had to build it.</p>
+      <p><span class="label">What&rsquo;s mine.</span> Nearly all of it &mdash; the Tauri desktop shell, the Rust backend, the SvelteKit front end, the SQLite store with full-text search, the indexer that reads my existing folders without moving a file. It all runs local, on my machine, not someone&rsquo;s cloud. And the governance itself, which I&rsquo;ve now built twice. The first version was the rulebook written as Markdown docs and prompts, with the AI told to read them and behave. That works partway &mdash; but rules in a doc can be skipped, forgotten, or argued around. So the version I&rsquo;m building now codifies the same rules into the Rust itself: the sign-offs, the tier classification, the bounded lifecycle, the proposal-to-write-back flow, the freshness tracking. Once it&rsquo;s in the binary, the agent can&rsquo;t talk its way past it &mdash; it has to go through it. Rewriting governance from &ldquo;Markdown the AI is supposed to follow&rdquo; to &ldquo;Rust the AI has to pass through&rdquo; is slow work, and it&rsquo;s why ECO is still going.</p>
+      <p><span class="label">What I wired in.</span> Less than the other projects &mdash; but not nothing. There&rsquo;s a provider layer so ECO can run against mock AI or live, and swap between vendors: Anthropic is the daily driver, but there&rsquo;s a proven live run on OpenAI too (VERIF-182), so this one isn&rsquo;t tied to a single AI company. Past that, the code is mine.</p>
+      <p><span class="label">How I ran it.</span> The agent setup isn&rsquo;t a quirk &mdash; it&rsquo;s the shape complex work needs. Any well-run shop splits it the same way: someone plans, someone builds, and the boss signs off on both. ECO is the desktop app that lets me work like that with AI. I run two of Anthropic&rsquo;s agents under role prompts I wrote &mdash; one I named Talos for strategy and audit, one I named Effy for the build &mdash; and I hold final say over both. The agents are off the shelf; the framework around them &mdash; the roles, the separation, the rules, the checkpoints &mdash; is mine. Every task goes through that checkpoint discipline, and the pre-commit review is a hard stop. Nothing gets committed without my sign-off.</p>
+      <p><span class="label">The receipts.</span> 267 commits since March. One example of the discipline: I cut the app&rsquo;s main screen from 8,912 lines down to 2,043 &mdash; across thirteen passes, each one regression-proven before I moved to the next, no &ldquo;trust me, it still works.&rdquo; And the whole governed lifecycle &mdash; run, write back, re-run, mark verified &mdash; is proven end to end, under both a mock AI and a live one. That&rsquo;s not a demo. That&rsquo;s the thing working.</p>
+      <p><span class="label">Why it counts.</span> It&rsquo;s the biggest thing I&rsquo;ve built, it&rsquo;s not done, and it&rsquo;s solving a problem I couldn&rsquo;t find solved anywhere else. Building it is how I learned to keep a long, multi-agent job coherent, keep a human in charge of every call, and prove what&rsquo;s been checked instead of hoping. If a client&rsquo;s got a build that&rsquo;s going to run for months across more than one AI, this is the kind of control I bring to it.</p>
+      <p class="techline">Tauri, Rust, SvelteKit, and SQLite with full-text search.</p>
+    </div>
+
+    <h3 style="font-size:19px;font-weight:700;margin:30px 0 16px;">Also running right now</h3>
+    <div class="project compact">
+      <p><strong>ETS2LA audit &mdash; the bugs are in the patterns, not the language.</strong> ETS2LA is a self-driving plugin for Euro Truck Simulator 2 &mdash; a four-year-old Python project the upstream team is now rewriting in C# because of long-running performance and stability issues. My read on it: those are design-pattern bugs, not language bugs. They&rsquo;ll come back in C# unless the patterns get fixed first. This campaign is the proof, one bug at a time.</p>
+      <p>This is local work, not an upstream-PR effort &mdash; and there&rsquo;s a reason for that. Upstream has a flat ban on AI-written code (they&rsquo;ve closed eight PRs over it), and my workflow leans on AI hard. So I work inside the constraint instead of around it: I hand-type every diff into VS Code myself, run the in-game checks myself, and the fixes stay on my machine. The mod is theirs &mdash; GPL v3, every line of it. What&rsquo;s mine is the campaign and the argument it makes. It&rsquo;s a skill-test and a learning project at the same time, and I&rsquo;ll say so plainly.</p>
+      <blockquote><p>The report opens with the rule I wrote for it: &ldquo;write like you&rsquo;re explaining the fix to a foreman, not pitching to a board.&rdquo;</p></blockquote>
+      <p>Two bugs closed so far:</p>
+      <ul>
+        <li><strong>Arbitrary code execution through the settings file (ETS-021/022).</strong> The loader was running <code>pickle.loads(eval(value))</code> on text it read straight out of a SQLite file &mdash; so anyone who could write to that file could run Python on the next launch. I replaced it with <code>json.loads</code> and took both <code>eval</code> and <code>pickle</code> out of that path. Verified with hostile-input round-trip tests and a real in-game window-drag. The same hole comes back in C# through Roslyn scripting or BinaryFormatter &mdash; Microsoft has explicitly warned against BinaryFormatter for this exact reason. The language doesn&rsquo;t save you; fixing the pattern does.</li>
+        <li><strong>Window position that never saved (ETS-023).</strong> A function called <code>check_if_window_still_open</code> was polling the OS for the window position and writing it down &mdash; but nothing in the codebase ever called it. Dead since at least August 2025. A two-line fix wired it back into the existing 10Hz tick. Verified in-game. No compiler flags this one &mdash; catching it in the C# port means a human walking the call graph by hand, which is exactly the kind of thing a rewrite skips.</li>
+      </ul>
+      <p><em>How I run it:</em> four roles, not two &mdash; and except for me, they&rsquo;re external AI under role prompts I wrote. A Director (Talos) sets strategy and scope, reached only through me. An Auto Drive Agent does the building &mdash; it probes the repo read-only and drafts the diff text in the reports, but it never edits the code, never commits, never opens a PR. An Auto Drive Strategist (a separate Claude session) gives a second opinion each cycle. And I&rsquo;m the operator: I route between them, make the calls, hand-type every diff, and run the in-game verification. The paper trail is the same jobsite kit I use everywhere &mdash; a Kanban board (INBOX &rarr; ACTIVE &rarr; AWAITING_OPERATOR &rarr; VERIFY &rarr; COMPLETED, plus a HALTED lane), an append-only JSONL ledger that logs every state change, session logs, handover and context-pack files, and a rolling current-state file.</p>
+      <p><em>Why it counts:</em> reading someone else&rsquo;s code at scale and explaining why it&rsquo;s wrong, not just what&rsquo;s wrong. Holding a real technical argument &mdash; the C# point &mdash; against a four-year codebase and backing it bug by bug. And working inside a hard limit instead of around it: the AI-code ban meant hand-typing every diff and taking the slower path on purpose. Two bugs closed so far. It&rsquo;s focused work, not a cathedral &mdash; and that&rsquo;s exactly what it needs to be.</p>
+      <p><strong>UnoAi &mdash; a browser-based AI companion, built for ownership.</strong> <em>The job:</em> buy once, bring your own key, conversations stay on your device, self-hostable. <em>What&rsquo;s mine:</em> the app and the strict procedures around it. <em>How I ran it:</em> a written rule set, a pre-commit hook that runs secret-scanning and linting, a method statement required before any file changes, sign-offs with proof, and an RFI when something&rsquo;s blocked &mdash; jobsite paperwork applied to software, which is exactly why I use it. <em>SvelteKit and TypeScript, PolyForm Noncommercial license. Phase 0b complete.</em></p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">The arc &mdash; three months, dated</h2>
+    <p>I&rsquo;m showing the early stuff on purpose. These are first attempts, not shipped products, and I&rsquo;m not going to pretend otherwise. The story is the climb.</p>
+    <ul>
+      <li><strong>Feb 17, 2026</strong> &mdash; Earliest dated file on my machine: an audio archive from before I started coding. (I made music first.)</li>
+      <li><strong>Feb 19</strong> &mdash; First Python I wrote: an early audio engine and an LLM bridge script. These survive only as zip snapshots now, not a live project &mdash; so I&rsquo;m calling them what they are: where it started.</li>
+      <li><strong>Feb 22&ndash;28</strong> &mdash; First real week. Audio tools (a music player with a beat-reactive visualiser, a visual playlist tool, an audio-video mesh), a job-hunting web app &mdash; the first version of what I&rsquo;d iterate through into HuntOS v2, then v3 and v4 in the weeks after &mdash; and a couple of skeletons I started and didn&rsquo;t finish. Even these first ones shipped with READMEs, troubleshooting docs, and a plug-in structure. The documentation habit was there from day one.</li>
+      <li><strong>March</strong> &mdash; Prototypes get serious. Stability Forge &mdash; first started in late February alongside the audio tools, but in early March it got my first written-down agent crew: Alex on the engine, Sarah on the wrapper, and a read-only auditor I called TALLAS. That role-separation method has shown up in every project since. Alongside it: HuntOS v3 &rarr; v4 (the job-hunting platform from week one, now with named agents David and Heather), Founder Brain (a small, clean service with a local database), a deterministic combat simulator with replay and seeded randomness, plus a behavioural-intelligence framework, an author-enrichment pipeline, a beat generator, and a couple of music tools.</li>
+      <li><strong>Mar 27</strong> &mdash; First commit on ECO. The folder was opened a week earlier on Mar 19 &mdash; I didn&rsquo;t start tracking it in git until Mar 27.</li>
+      <li><strong>Apr 30</strong> &mdash; Set up the two-role agent rotation (Talos and Effy) on top of ECO.</li>
+      <li><strong>May 17</strong> &mdash; Shipped PC_HEALTH. In daily use ever since.</li>
+      <li><strong>May 26</strong> &mdash; L.I.LY hit v0.9, 139 tests passing after a safety-hardening sweep.</li>
+      <li><strong>May 27</strong> &mdash; ETS2LA audit report delivered.</li>
+    </ul>
+    <p>The March prototypes mostly didn&rsquo;t ship to production, and I won&rsquo;t say they did. What they show is the climb &mdash; and that the way I run AI agents now didn&rsquo;t appear from nowhere. The role-separation method has a March prototype behind it. You can watch the same idea get sharper across every project.</p>
+  </section>
+
+  <section>
+    <h2 class="big">How I work with AI &mdash; the crew</h2>
+    <p>This is the spine of everything above. I don&rsquo;t treat an AI like a magic 8-ball you shake and trust. I run them like a crew: I give each one a name, a narrow job, a written role prompt, and a checkpoint it can&rsquo;t skip &mdash; and I stay in the loop as the foreman who signs off. Let me be straight about what that is and isn&rsquo;t. The agents are Anthropic&rsquo;s, off the shelf. What&rsquo;s mine is the method around them &mdash; the role separation, the workflow rules, the prompt files, the checkpoints. That&rsquo;s light scaffolding, not a deep technical build. The one real exception is WARD, inside L.I.LY: that&rsquo;s a multi-agent safety system I wrote in code, with 139 tests behind it. Here&rsquo;s the bird&rsquo;s-eye view.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:13%;">When</th>
+            <th style="width:22%;">Project</th>
+            <th style="width:34%;">The agents I named, and their jobs</th>
+            <th style="width:31%;">What&rsquo;s mine in it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>March</td><td>Stability Forge</td><td>Alex (engine), Sarah (wrapper), TALLAS (read-only audit)</td><td>The role split and the workflow rules</td></tr>
+          <tr><td>March</td><td>HuntOS 4.0</td><td>David, Heather</td><td>The role prompts I drafted</td></tr>
+          <tr><td>March</td><td>Combat sim</td><td>Kade Orion (systems builder)</td><td>The role prompt and the scope</td></tr>
+          <tr><td>Apr&ndash;now</td><td>ECO</td><td>Talos (strategy and audit), Effy (build)</td><td>Role separation, prompt files, five checkpoints</td></tr>
+          <tr><td>May&ndash;now</td><td>L.I.LY</td><td>WARD, KEEP, GATE (planned) &mdash; the internal safety crew</td><td>The code, end to end &mdash; the safety crew plus the dev infrastructure that holds the build together</td></tr>
+          <tr><td>May</td><td>ETS2LA</td><td>Director (Talos) for strategy, Auto Drive Agent for the work, Auto Drive Strategist for second-opinion review</td><td>The four-role split, the workflow, the routing, and hand-typing every diff into VS Code myself per the upstream AI-code ban</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Same shape every time: agents I name and scope narrowly, the operator holding final authority, and the rules written down. The agents are accelerators. The judgment is mine. When one gets it wrong &mdash; and they do &mdash; I&rsquo;m the one who catches it before it ships, because the checkpoints that catch it are mine.</p>
+    <p>I&rsquo;m not locked to one vendor, either. I mostly run Claude models day to day, but I&rsquo;ve worked across Claude Code, Cursor, Cline, and Windsurf. I pick the tool for the job. The work is AI-assisted; the calls are mine.</p>
+  </section>
+
+  <section>
+    <h2 class="big">The stack &mdash; what I write, and what I wire together</h2>
+
+    <h3 style="font-size:19px;font-weight:700;margin:0 0 12px;">Languages I write and read in</h3>
+    <p>I&rsquo;m not claiming to be an expert in nine languages after three months. What I&rsquo;m claiming is that I can move between stacks fast enough to ship in them and to audit them.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:34%;">Language</th><th>Where I&rsquo;ve used it</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Python</td><td>L.I.LY, PC_HEALTH, the ETS2LA audit, most of the March work</td></tr>
+          <tr><td>Rust</td><td>ECO&rsquo;s backend</td></tr>
+          <tr><td>TypeScript</td><td>ECO and UnoAi</td></tr>
+          <tr><td>Svelte</td><td>ECO and UnoAi</td></tr>
+          <tr><td>JavaScript / HTML / CSS</td><td>Web interfaces across L.I.LY, ECO, UnoAi</td></tr>
+          <tr><td>PowerShell</td><td>Backup scripts, the PC_HEALTH event-log piece</td></tr>
+          <tr><td>Bash</td><td>The UnoAi validator script (<code>scripts/validate.sh</code>). One file, but it does real work &mdash; secrets-scan + Prettier + ESLint + cspell + structural validation as a pre-commit gate.</td></tr>
+          <tr><td>SQL</td><td>Databases in ECO, Founder Brain, and others</td></tr>
+          <tr><td>C# (read, not written)</td><td>Reading a game&rsquo;s runtime to plan mod work</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:19px;font-weight:700;margin:26px 0 12px;">What I integrate &mdash; other people&rsquo;s tools, wired together right</h3>
+    <p>A lot of what I ship sits on top of open-source software other people wrote. I&rsquo;m straight about that, because picking the right tool, reading its docs, pinning a version that works, writing the glue, and documenting how to put it back when it breaks &mdash; that&rsquo;s a real skill, and it&rsquo;s one a lot of &ldquo;I built it all myself&rdquo; portfolios quietly skip. Plenty of clients have been burned by someone who rebuilt a worse version of a solved problem instead of using the tool that already works.</p>
+    <p>These are tools I integrate. They&rsquo;re not my code. I wire them in and I keep them running:</p>
+    <ul>
+      <li><strong>AI / LLM:</strong> Anthropic&rsquo;s API and the Model Context Protocol (MCP)</li>
+      <li><strong>Networking:</strong> Tailscale (private network access, so things never leave your own machines)</li>
+      <li><strong>Backup:</strong> Restic (encrypted snapshots, with a retention and restore routine I wrote and tested)</li>
+      <li><strong>Hardware sensing:</strong> LibreHardwareMonitor, smartmontools, nvidia-smi, the Windows Event Log</li>
+      <li><strong>Voice / audio ML:</strong> XTTS-v2, faster-whisper, silero-vad</li>
+      <li><strong>Compute:</strong> PyTorch with CUDA</li>
+      <li><strong>Web frameworks:</strong> FastAPI, SvelteKit, Tauri</li>
+      <li><strong>Storage:</strong> SQLite with full-text search, Supabase</li>
+      <li><strong>Hosting:</strong> Cloudflare Pages</li>
+      <li><strong>Quality and security:</strong> Playwright, Vitest, ESLint, secret-scanning</li>
+    </ul>
+
+    <h3 style="font-size:19px;font-weight:700;margin:26px 0 12px;">The discipline that isn&rsquo;t code</h3>
+    <p>Some of how I work doesn&rsquo;t show up as code at all, but it&rsquo;s where the blue-collar side earns its keep:</p>
+    <ul>
+      <li><strong>Two backup systems, both running.</strong> Daily automated snapshots of ECO since 2026-04-28 (31 dated snapshot folders on the backup drive, set-and-forget). Separately, an encrypted Restic system for L.I.LY plus my private vault &mdash; a wrapper script I wrote in PowerShell, ACL-locked passphrase, retention policy (14 daily / 8 weekly / 12 monthly), and a documented disaster-recovery flow I&rsquo;ve walked through. Two different jobs, two different shapes, both real.</li>
+      <li><strong>Verification logs and decision logs as real documents,</strong> not afterthoughts. The last verified entry is the ground truth. Every decision has a record.</li>
+      <li><strong>Method statements, sign-offs, RFIs, inspections</strong> &mdash; jobsite paperwork applied to software. When the work&rsquo;s blocked I raise it; when it&rsquo;s done I prove it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="big">Let&rsquo;s talk about the job</h2>
+    <p>I&rsquo;ll be straight with you: I haven&rsquo;t had a paid client yet. I&rsquo;m after the first one. No fake reviews, no borrowed logos, no made-up &ldquo;trusted by&rdquo; line on this page &mdash; when I&rsquo;ve done paid work, you&rsquo;ll see it here, and not before.</p>
+    <p>What I can do is show you working software instead of talking about it. If you&rsquo;ve got a job &mdash; a desktop tool, an AI integration, automation for a small business, an audit of code someone left you &mdash; I&rsquo;ll show you the code, walk you through how I&rsquo;d run it, and tell you straight what I can and can&rsquo;t do.</p>
+    <p class="closing-contact"><strong>Geraldton, Western Australia</strong> <span class="sep">&middot;</span> <a href="mailto:tyrienjones@gmail.com">tyrienjones@gmail.com</a> <span class="sep">&middot;</span> GitHub: <a href="https://github.com/tyrienjones-tech">tyrienjones-tech</a></p>
+  </section>
+
+</main>
+</body>
+</html>
