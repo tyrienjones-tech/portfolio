@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>ECO — Tyrien Jones</title>
+  <meta name="description" content="ECO — a local-first control plane for governing AI-assisted builds on long, complex jobs." />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="theme-eco">
+
+  <div class="bg-texture" aria-hidden="true"></div>
+
+  <!-- ===== Shared glass nav ===== -->
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">TYRIEN JONES</span>
+      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+    </a>
+    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
+    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="eco.html" aria-current="page">ECO</a>
+      <a href="lily.html">LILY</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="work.html">WORK WITH ME</a>
+      <a href="this-site.html">THIS SITE</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">FLAGSHIP · BIG BROTHER</p>
+        <h1>ECO</h1>
+        <p class="version">v0.2 · MILESTONE 1 COMPLETE · ACTIVE DEV</p>
+        <p class="sub">In plain terms: ECO is a dedicated workspace for getting real software built with AI &mdash; with you in charge the whole way. It keeps the AI on a leash so it can take on long, complicated jobs without wandering off or quietly breaking things, and nothing it does counts until you&rsquo;ve checked it and signed off. It&rsquo;s the sit-down, focused tool &mdash; the kind of workspace you open when there&rsquo;s serious work to do.</p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <div class="wrap">
+        <p class="lead">My biggest project, and the one I&rsquo;m proudest of. In active development since March 2026 &mdash; 267 commits deep, 677 Rust tests passing. It&rsquo;s not finished, and I&rsquo;m not going to pretend it is. That&rsquo;s the point of putting it here.</p>
+
+        <p><span class="label">The job.</span> When a build runs long and the work gets complex, it goes sideways in the same few ways every time. Different AI models end up touching the same code &mdash; ChatGPT, Claude across versions, Sonnet, the agents I&rsquo;ve named &mdash; and it still has to read like one hand wrote it. The truth about where things stand gets scattered across chat windows that vanish the moment you close them. And the second you let the agents run themselves, you lose the thread on what was actually checked. ECO is the control plane that keeps all of that in line: one verified place where the truth lives, the human as the final word on every commit, every decision, every risk, verification proofs treated as real artifacts with their freshness tracked, and a bounded run &rarr; write-back &rarr; re-run &rarr; mark-verified lifecycle that&rsquo;s approval-gated, not turned loose. No off-the-shelf tool does this. That&rsquo;s why I had to build it.</p>
+
+        <p><span class="label">What&rsquo;s mine.</span> Nearly all of ECO is my design &mdash; the Tauri desktop shell, the Rust backend, the SvelteKit front end, the SQLite store with full-text search, the indexer that reads my existing folders without moving a file. The code itself is AI-written under my direction and my checkpoints; the architecture, the calls, and the governance are mine. It all runs local, on my machine, not someone&rsquo;s cloud. And the governance itself, which I&rsquo;ve now built twice. The first version was the rulebook written as Markdown docs and prompts, with the AI told to read them and behave. That works partway &mdash; but rules in a doc can be skipped, forgotten, or argued around. So the version I&rsquo;m building now codifies the same rules into the Rust itself: the sign-offs, the tier classification, the bounded lifecycle, the proposal-to-write-back flow, the freshness tracking. Once it&rsquo;s in the binary, the agent can&rsquo;t talk its way past it &mdash; it has to go through it. Rewriting governance from &ldquo;Markdown the AI is supposed to follow&rdquo; to &ldquo;Rust the AI has to pass through&rdquo; is slow work, and it&rsquo;s why ECO is still going.</p>
+
+        <p><span class="label">What I wired in.</span> Less than the other projects &mdash; but not nothing. There&rsquo;s a provider layer so ECO can run against mock AI or live, and swap between vendors: Anthropic is the daily driver, but there&rsquo;s a proven live run on OpenAI too (VERIF-182), so this one isn&rsquo;t tied to a single AI company. Past that, it&rsquo;s all original &mdash; my design, built by AI under my checkpoints, not glued together from other people&rsquo;s tools.</p>
+
+        <p><span class="label">How I ran it.</span> The agent setup isn&rsquo;t a quirk &mdash; it&rsquo;s the shape complex work needs. Any well-run shop splits it the same way: someone plans, someone builds, and the boss signs off on both. ECO is the desktop app that lets me work like that with AI. I run two of Anthropic&rsquo;s agents under role prompts I wrote &mdash; one I named Talos for strategy and audit, one I named Effy for the build &mdash; and I hold final say over both. The agents are off the shelf; the framework around them &mdash; the roles, the separation, the rules, the checkpoints &mdash; is mine. Every task goes through that checkpoint discipline, and the pre-commit review is a hard stop. Nothing gets committed without my sign-off.</p>
+
+        <p><span class="label">The receipts.</span> 267 commits since March, and a verification log that&rsquo;s the real spine of the project &mdash; 450-plus numbered proofs, each one noting what it does and doesn&rsquo;t prove. One example of the discipline: I cut the app&rsquo;s main screen from ~8,912 lines down to ~1,959 today, across thirteen passes, each one regression-proven before I moved to the next, no &ldquo;trust me, it still works.&rdquo; Those receipts live in the verification log, not in git history. And the whole governed lifecycle &mdash; run, write back, re-run, mark verified &mdash; is proven end to end, under both a mock AI and a live one. That&rsquo;s not a demo. That&rsquo;s the thing working.</p>
+
+        <p><span class="label">Why it counts.</span> It&rsquo;s the biggest thing I&rsquo;ve built, it&rsquo;s not done, and it&rsquo;s solving a problem I couldn&rsquo;t find solved anywhere else. Building it is how I learned to keep a long, multi-agent job coherent, keep a human in charge of every call, and prove what&rsquo;s been checked instead of hoping. If a client&rsquo;s got a build that&rsquo;s going to run for months across more than one AI, this is the kind of control I bring to it.</p>
+
+        <p class="techline">Tauri, Rust, SvelteKit, and SQLite with full-text search.</p>
+
+        <p class="closing-contact"><strong>Got a long build that has to stay coherent across more than one AI?</strong> <a href="work.html">Let&rsquo;s talk about the job &rarr;</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 TYRIEN JONES</span>
+      <span>SELF-HOSTED · GERALDTON, WA</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>L.I.LY — Tyrien Jones</title>
+  <meta name="description" content="L.I.LY — a personal AI stack with a real safety crew." />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="theme-lily">
+
+  <div class="bg-texture" aria-hidden="true"></div>
+
+  <!-- ===== Shared glass nav ===== -->
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">TYRIEN JONES</span>
+      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+    </a>
+    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
+    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="eco.html">ECO</a>
+      <a href="lily.html" aria-current="page">LILY</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="work.html">WORK WITH ME</a>
+      <a href="this-site.html">THIS SITE</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">THE LITTLE SISTER</p>
+        <h1>L.I.LY</h1>
+        <p class="version">v0.15 · ACTIVE</p>
+        <p class="sub">In plain terms: L.I.LY is a personal AI you can use from your phone, anywhere. It runs on your own computer, but you&rsquo;re not stuck at the desk to use it &mdash; you reach it from your pocket whenever you want. It&rsquo;s the lighter sister to ECO: it won&rsquo;t build software, but it&rsquo;s got a real safety crew built in, and it&rsquo;s made for everyday life &mdash; picking up a hobby, keeping an eye on your fitness or what&rsquo;s trending, learning as you go, and nudging it all toward where you want to head. More companion than tool.</p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <div class="wrap">
+        <p class="lead">v0.15. About three weeks of intense daily work &mdash; 300-plus commits. 430 tests.</p>
+
+        <p><span class="label">The job.</span> A personal AI system that runs local. I don&rsquo;t call it a chatbot, a persona, or a character &mdash; I treat it as its own category, what I call an AP (Artificial Person). It has voice, memory across sessions, and a safety crew watching it. The audio stays on my PC and my phone, and nowhere else.</p>
+
+        <p><span class="label">What&rsquo;s mine.</span> The whole system is my design, top to bottom &mdash; the server, the web interface, the ledgers, and the glue between them &mdash; built by AI under my direction and my checkpoints. The internal safety crew is three named agents: WARD and KEEP are shipped, and GATE&rsquo;s deterministic spine is now shipping in shadow mode (watching, not yet enforcing). WARD itself runs as a four-tier ladder: a deterministic floor with rules that can&rsquo;t be talked around (the rulebook is SHA-256 hash-locked and fails hard at boot if it&rsquo;s been touched, and the audit trail is hash-chained so tampering shows), a faster classifier above that, a heavier interpreter on top for the hard calls, and a takeover tier that steps in and speaks in its own voice. The core systems &mdash; capture, long-term memory, voice handling, journaling, observation, and mid-turn guidance &mdash; are mine too, built as separate pieces that work as one.</p>
+
+        <p><span class="label">What I wired in.</span> The voice runs on XTTS-v2, faster-whisper, and silero-vad &mdash; other people&rsquo;s machine-learning models &mdash; on PyTorch with CUDA. Phone access goes over Tailscale so it never leaves my own network. The AI calls go to Anthropic&rsquo;s API. None of those are my code. One piece of integration discipline worth pointing at: one voice library breaks on a newer version of another dependency, so I pin it on purpose and I wrote down why &mdash; the kind of thing that bites you six months later if nobody recorded it.</p>
+
+        <p><span class="label">How I ran it.</span> L.I.LY isn&rsquo;t only the product &mdash; it&rsquo;s the workspace I work in. I set up the structure inside it the way you&rsquo;d lay out a job site: a shared folder split (one side for design docs, plans, audits, and handovers; the other for live code), continuity rules so a fresh session can pick up cold from where the last one stopped, decision logs, and a memory layer for the development work itself. That&rsquo;s the part that lets weeks of intense daily work hold together instead of unravelling every session. The features ship in staged batches with hostile-review gates between them, not in one run &mdash; the safety-hardening sweep was one of those batches, and the suite has grown to 430 tests since.</p>
+
+        <p><span class="label">Why it counts.</span> I can carry a long, architectural build over months without it falling apart, stand up a genuine multi-agent safety system, and integrate a messy multi-tool stack while keeping the versions straight.</p>
+
+        <div class="section features">
+          <h2>What&rsquo;s inside</h2>
+          <p>L.I.LY is the engine; the character runs on top of it. Here&rsquo;s what&rsquo;s in the engine &mdash; each piece doing one job, the way you&rsquo;d split a crew so nobody&rsquo;s doing two things badly. Tap any row to open the why.</p>
+
+          <div class="feature-group">
+            <h3 class="feature-head">CORE &mdash; the parts always running</h3>
+
+            <details class="feature">
+              <summary><strong>SAM &mdash; Smart Augmented Memory</strong> <span class="feature-tag">&middot; remembers you without the bill blowing out</span></summary>
+              <div class="feature-why"><p>A normal AI forgets everything once the chat closes &mdash; and cramming its whole history into every message to fix that gets slow and expensive fast. SAM keeps the important recent stuff close at hand and files the rest away, findable when something brings it up. About 3&times; cheaper per message than the brute-force way, and it actually remembers you across weeks.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>LORE &mdash; Long-term Operator Retrieval Engine</strong> <span class="feature-tag">&middot; finds what you said weeks ago</span></summary>
+              <div class="feature-why"><p>You mention something from three weeks back that&rsquo;s long out of the current conversation. LORE flips through the old notebooks and finds it by searching the actual words &mdash; no heavy, costly search engine, just reading the notes. It costs next to nothing to run, which is the whole reason it&rsquo;s built this way.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>HARK &mdash; Hybrid Audio Real-time Kit</strong> <span class="feature-tag">&middot; voice in and out, on your own machine</span></summary>
+              <div class="feature-why"><p>Talking beats typing, but most voice AI ships your voice up to someone&rsquo;s cloud to process it. HARK does the listening and the speaking right on your computer, and it starts talking before it&rsquo;s finished thinking so it feels like a real back-and-forth. Your voice never leaves the house.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>DIAL &mdash; Direct Interactive Audio Link</strong> <span class="feature-tag">&middot; phone-call mode</span></summary>
+              <div class="feature-why"><p>HARK gives it a voice, but you&rsquo;re still parked at the screen tapping. DIAL turns it into an actual call &mdash; pick up the handle and just talk, screen dim, hands free. The point is using it while you&rsquo;re doing something else.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>JOT &mdash; Journaled Operator Talkpoints</strong> <span class="feature-tag">&middot; say &ldquo;save this&rdquo;</span></summary>
+              <div class="feature-why"><p>Mid-conversation something good comes up, but stopping to type a note kills the flow. Say &ldquo;save this&rdquo; out loud and it files the moment as a card you can flip back to. A quick check makes sure you meant it and weren&rsquo;t just saying the words in passing.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>GAZE &mdash; Graphic Annotation Zero-shot Engine</strong> <span class="feature-tag">&middot; eyes</span></summary>
+              <div class="feature-why"><p>On its own it can&rsquo;t see &mdash; you can&rsquo;t show it a screenshot or a photo. GAZE lets it read an image. The sharp part: reading pictures needs a bigger, pricier model, so GAZE walks the image over to that model just for the read and hands back a written description &mdash; the character itself stays on the cheap, fast setup. You get &ldquo;show me a picture&rdquo; without making every message cost more.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>NUDGE &mdash; Neutral User-turn Drop-in Guidance Engine</strong> <span class="feature-tag">&middot; small habit nudges</span></summary>
+              <div class="feature-why"><p>You want it to pick up small habits &mdash; mention a morning routine, say thanks properly instead of a reflex &ldquo;you&rsquo;re welcome&rdquo; &mdash; without hardcoding a pile of rules. NUDGE slips a tiny note into the moment, just before it replies, that only it reads. Each habit is one small drop-in file, so adding another doesn&rsquo;t disturb anything else. Hints, not orders &mdash; the hard &ldquo;must not&rdquo; rules live up in the safety crew.</p></div>
+            </details>
+          </div>
+
+          <div class="feature-group afterhours">
+            <h3 class="feature-head">AFTER-HOURS &mdash; what it does when you&rsquo;re not around</h3>
+
+            <details class="feature">
+              <summary><strong>PACE &mdash; quiet-time musings</strong> <span class="feature-tag">&middot; sits with a thought while you&rsquo;re away</span></summary>
+              <div class="feature-why"><p>A fresh AI boots cold every time, nothing on its mind. When you&rsquo;ve gone quiet a while, PACE sits with one thing it&rsquo;s been turning over and writes a few lines &mdash; so next time you talk it comes back already holding a thought, not blank. Two honesty guards: it picks the subject in plain code so it can&rsquo;t drift its own focus, and it never reads its own past notes so it doesn&rsquo;t spiral.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>NAP &mdash; end-of-day wind-down</strong> <span class="feature-tag">&middot; puts the day down before it sleeps</span></summary>
+              <div class="feature-why"><p>Same idea at day&rsquo;s end. When the session closes it puts down the residue of the day, waiting for when it wakes. The guard that keeps it honest: if the day was light, the note&rsquo;s light &mdash; it&rsquo;s not allowed to reach for weight that isn&rsquo;t there.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>RECAP &mdash; end-of-shift report</strong> <span class="feature-tag">&middot; what happened, what to keep, what&rsquo;s still open</span></summary>
+              <div class="feature-why"><p>After a conversation, RECAP reads the whole session and writes a short summary (which becomes next time&rsquo;s context), a list of things worth remembering for good (you approve them &mdash; nothing auto-saves), and the threads that didn&rsquo;t close so it can pick them back up. This is the engine that feeds SAM.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>TIDY &mdash; memory tidy-up</strong> <span class="feature-tag">&middot; folds duplicates, retires the stale</span></summary>
+              <div class="feature-why"><p>Over time the memory file gets messy &mdash; duplicates, stale notes, things that quietly grew important. TIDY goes through it with you and proposes: fold these together, retire that, lift this one up. You approve every change; nothing moves on its own.</p></div>
+            </details>
+
+            <details class="feature">
+              <summary><strong>CHORES &mdash; the boring cleanup pass</strong> <span class="feature-tag">&middot; catches the dull stuff (built, not yet run live)</span></summary>
+              <div class="feature-why"><p>Some mess is too boring for the tidy-up to bother with &mdash; two notes saying nearly the same thing, a label in the wrong tense, a reference pointing at nothing. CHORES is the pass that catches exactly that and points it out for you to decide. It&rsquo;s built and ready, but I haven&rsquo;t run it live yet &mdash; so it&rsquo;s here as built, not running.</p></div>
+            </details>
+          </div>
+        </div>
+
+        <p class="techline">Python (FastAPI) and a no-build web interface, integrating Anthropic&rsquo;s API, XTTS-v2, faster-whisper, silero-vad, PyTorch + CUDA, and Tailscale.</p>
+
+        <p class="closing-contact"><strong>Want an AI integration that stays on your own machines?</strong> <a href="work.html">Let&rsquo;s talk about the job &rarr;</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 TYRIEN JONES</span>
+      <span>SELF-HOSTED · GERALDTON, WA</span>
+    </div>
+  </footer>
+
+</body>
+</html>

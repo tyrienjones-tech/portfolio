@@ -1,0 +1,4 @@
+# Self-hosted images/textures go here. Nothing is committed yet.
+# Planned:
+#   circuit.svg  — faint right-side background texture
+# After adding it, uncomment the `background:` line in the .bg-texture rule in /assets/css/site.css.

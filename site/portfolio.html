@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Portfolio — Tyrien Jones</title>
+  <meta name="description" content="Everything I've built — finished, half-built, all dated. Nothing here is dressed up." />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="theme-portfolio">
+
+  <div class="bg-texture" aria-hidden="true"></div>
+
+  <!-- ===== Shared glass nav ===== -->
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">TYRIEN JONES</span>
+      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+    </a>
+    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
+    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="eco.html">ECO</a>
+      <a href="lily.html">LILY</a>
+      <a href="portfolio.html" aria-current="page">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="work.html">WORK WITH ME</a>
+      <a href="this-site.html">THIS SITE</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">THE WORK</p>
+        <h1>Portfolio</h1>
+        <p class="sub">Everything I&rsquo;ve built &mdash; finished, half-built, all dated. Nothing here is dressed up.</p>
+      </div>
+    </section>
+
+    <section class="prose">
+      <div class="wrap">
+
+        <div class="section">
+          <h2>Featured work</h2>
+          <p>PC_HEALTH gets the full write-up below. ECO and L.I.LY are big enough to get their own pages &mdash; the cards below take you straight there. Then one more I&rsquo;m running right now. Every one&rsquo;s split the same way, so the lines are clear and you can scan it:</p>
+          <ul>
+            <li><strong>The job</strong> &mdash; what it is, in plain terms.</li>
+            <li><strong>What&rsquo;s mine</strong> &mdash; the part I built.</li>
+            <li><strong>What I wired in</strong> &mdash; other people&rsquo;s tools I integrated. Not my code. I pick them, read the docs, pin a version that works, and write the glue.</li>
+            <li><strong>How I ran it</strong> &mdash; the agents and the checkpoints.</li>
+            <li><strong>Why it counts</strong> &mdash; what it proves I can do for you.</li>
+          </ul>
+          <p>One thing that pattern makes obvious: the projects aren&rsquo;t all the same kind of work. PC_HEALTH is mostly wiring good tools together. ECO is mostly original, bespoke work. L.I.LY is both. That&rsquo;s the range.</p>
+          <p>PC_HEALTH leads because it&rsquo;s finished and I use it every day.</p>
+
+          <div class="project">
+            <h3>PC_HEALTH &mdash; a longevity monitor for Windows PCs</h3>
+            <p class="pstatus">Finished. v0.1.0. In daily use on my own machine. MIT licensed.</p>
+            <p>This one&rsquo;s smaller and looser than L.I.LY, and that&rsquo;s on purpose &mdash; a focused tool for one clean problem, not a months-long build. Different jobs need different shapes.</p>
+            <p><span class="label">The job.</span> Watch the health of a Windows PC over time &mdash; drive wear, temperatures, GPU, and system errors &mdash; and keep a timestamped record so you can see trouble coming before a drive dies on you. Read-only by design, and I mean it literally: there&rsquo;s exactly one network call in the whole tool, to a sensor service on my own machine. Nothing&rsquo;s written to firmware, nothing phones home, nothing leaves the box.</p>
+            <p><span class="label">What&rsquo;s mine.</span> The layer that sits on top of the sensors: the part that polls four separate sources on a sensible schedule, decides what counts as healthy versus worrying, writes clean timestamped JSON snapshots, and &mdash; the key piece &mdash; hands all of it to an AI through an MCP server with five typed, read-only tools (<code>get_current_health</code>, <code>get_recent_live</code>, <code>get_smart_history</code>, <code>get_recent_events</code>, <code>list_drives</code>). I also wrote the packaging and the docs that ship with it &mdash; a README that walks setup, AI integration, architecture, and dependency versions, plus a documented thresholds file for CPU and drive cutoffs with examples for per-model overrides. Docs built along the way, not bolted on.</p>
+            <p><span class="label">What I wired in.</span> The actual readings come from other people&rsquo;s open-source tools, not mine: LibreHardwareMonitor reads the CPU, GPU, and board sensors; smartmontools (<code>smartctl</code>) reads drive SMART data; <code>nvidia-smi</code> reads the GPU; the Windows Event Log handles system errors; and the whole thing speaks the Model Context Protocol (MCP). I didn&rsquo;t build a hardware monitor. I built the thing that turns four separate hardware tools into one clean stream an AI can read.</p>
+            <p><span class="label">How I ran it.</span> A solo build &mdash; my design, operator-directed, built by AI under <a href="about.html">the rules I run by</a> &mdash; read-only chosen on purpose, defensively coded against malformed sensor and CLI output, every dependency and version written down before I called it shipped.</p>
+            <p><span class="label">Why it counts.</span> I can ship working software end-to-end on a real stack, with clean separation between the readers, the aggregator, and the server. An honest README that lists every dependency. The right boundaries picked on purpose. Real software a client can run today.</p>
+            <p class="techline">Python 3.11+, on top of LibreHardwareMonitor, smartmontools, nvidia-smi, the Windows Event Log, and MCP. &nbsp; GitHub: <a href="https://github.com/tyrienjones-tech/PC_HEALTH_MCP">github.com/tyrienjones-tech/PC_HEALTH_MCP</a></p>
+          </div>
+
+          <a class="card" href="eco.html">
+            <h3>ECO &mdash; a control plane for governing AI-assisted builds</h3>
+            <p class="pstatus">v0.2 (Milestone 1 complete). My biggest project, and the one I&rsquo;m proudest of. In active development since March 2026 &mdash; 267 commits deep, 677 Rust tests passing.</p>
+            <span class="more">Read the full write-up &rarr;</span>
+          </a>
+
+          <a class="card" href="lily.html">
+            <h3>L.I.LY &mdash; a personal AI stack with a real safety crew</h3>
+            <p class="pstatus">v0.15. About three weeks of intense daily work &mdash; 300-plus commits. 430 tests.</p>
+            <span class="more">Read the full write-up &rarr;</span>
+          </a>
+
+          <h3>Also running right now</h3>
+          <div class="project compact">
+            <p><strong>ETS2LA audit &mdash; the bugs are in the patterns, not the language.</strong> ETS2LA is a self-driving plugin for Euro Truck Simulator 2 &mdash; a four-year-old Python project the upstream team is now rewriting in C# because of long-running performance and stability issues. My read on it: those are design-pattern bugs, not language bugs. They&rsquo;ll come back in C# unless the patterns get fixed first. This campaign is the proof, one bug at a time.</p>
+            <p>This is local work, not an upstream-PR effort &mdash; and there&rsquo;s a reason for that. Upstream has a flat ban on AI-written code (they&rsquo;ve closed eight PRs over it), and my workflow leans on AI hard. So I work inside the constraint instead of around it: I hand-type every diff into VS Code myself, run the in-game checks myself, and the fixes stay on my machine. The mod is theirs &mdash; GPL v3, every line of it. What&rsquo;s mine is the campaign and the argument it makes. It&rsquo;s a skill-test and a learning project at the same time, and I&rsquo;ll say so plainly.</p>
+            <blockquote><p>The report opens with the rule I wrote for it: &ldquo;write like you&rsquo;re explaining the fix to a foreman, not pitching to a board.&rdquo;</p></blockquote>
+            <p>Four bugs closed so far &mdash; two of them are arbitrary-code-execution holes:</p>
+            <ul>
+              <li><strong>Arbitrary code execution through the settings file (ETS-021/022).</strong> The loader was running <code>pickle.loads(eval(value))</code> on text it read straight out of a SQLite file &mdash; so anyone who could write to that file could run Python on the next launch. I replaced it with <code>json.loads</code> and took both <code>eval</code> and <code>pickle</code> out of that path. Verified with a hostile-input round-trip test and a real in-game window-drag. The same hole comes back in C# through Roslyn scripting or BinaryFormatter &mdash; Microsoft has explicitly warned against BinaryFormatter for this exact reason. The language doesn&rsquo;t save you; fixing the pattern does.</li>
+              <li><strong>A second code-execution hole, in the model-file loader (ETS-024).</strong> Same shape, different door: the loader ran <code>eval()</code> on the contents of a model file. I swapped it for <code>ast.literal_eval</code>, which parses data instead of running it. This one&rsquo;s supply-chain reachable &mdash; a poisoned model file from a compromised source would have run on the next update check.</li>
+              <li><strong>Window position that never saved (ETS-023).</strong> A function called <code>check_if_window_still_open</code> was polling the OS for the window position and writing it down &mdash; but nothing in the codebase ever called it. Dead since at least August 2025. A two-line fix wired it back into the existing 10Hz tick. Verified in-game. No compiler flags this one &mdash; catching it in the C# port means a human walking the call graph by hand, which is exactly the kind of thing a rewrite skips.</li>
+              <li><strong>Map page froze on the second open (ETS-005).</strong> Reopening the map locked the UI; traced to the page&rsquo;s re-init path and fixed.</li>
+            </ul>
+            <p><em>How I run it:</em> four roles, not two &mdash; and except for me, they&rsquo;re external AI under role prompts I wrote. A Director (Talos) sets strategy and scope, reached only through me. An Auto Drive Agent does the building &mdash; it probes the repo read-only and drafts the diff text in the reports, but it never edits the code, never commits, never opens a PR. An Auto Drive Strategist (a separate Claude session) gives a second opinion each cycle. And I&rsquo;m the operator: I route between them, make the calls, hand-type every diff, and run the in-game verification. The paper trail is the same jobsite kit I use everywhere &mdash; a Kanban board (INBOX &rarr; ACTIVE &rarr; AWAITING_OPERATOR &rarr; VERIFY &rarr; COMPLETED, plus HALTED and DEFERRED lanes), an append-only JSONL ledger that logs every state change, session logs, handover and context-pack files, and a rolling current-state file.</p>
+            <p><em>Why it counts:</em> reading someone else&rsquo;s code at scale and explaining why it&rsquo;s wrong, not just what&rsquo;s wrong. Holding a real technical argument &mdash; the C# point &mdash; against a four-year codebase and backing it bug by bug. And working inside a hard limit instead of around it: the AI-code ban meant hand-typing every diff and taking the slower path on purpose. Four bugs closed so far, two of them code-execution holes. It&rsquo;s focused work, not a cathedral &mdash; and that&rsquo;s exactly what it needs to be.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>The arc &mdash; three months, dated</h2>
+          <p>I&rsquo;m showing the early stuff on purpose. These are first attempts, not shipped products, and I&rsquo;m not going to pretend otherwise. The story is the climb.</p>
+          <ul>
+            <li><strong>Feb 17, 2026</strong> &mdash; Earliest dated file on my machine: an audio archive from before I started coding. (I made music first.)</li>
+            <li><strong>Feb 19</strong> &mdash; First Python I wrote: an early audio engine and an LLM bridge script. These survive only as zip snapshots now, not a live project &mdash; so I&rsquo;m calling them what they are: where it started.</li>
+            <li><strong>Feb 22&ndash;28</strong> &mdash; First real week. Audio tools (a music player with a beat-reactive visualiser, a visual playlist tool, an audio-video mesh), a job-hunting web app &mdash; the first version of what I&rsquo;d iterate through into HuntOS v2, then v3 and v4 in the weeks after &mdash; and a couple of skeletons I started and didn&rsquo;t finish. Even these first ones shipped with READMEs, troubleshooting docs, and a plug-in structure. The documentation habit was there from day one.</li>
+            <li><strong>March</strong> &mdash; Prototypes get serious. Stability Forge &mdash; first started in late February alongside the audio tools, but in early March it got my first written-down agent crew: Alex on the engine, Sarah on the wrapper, and a read-only auditor I called TALLAS. That role-separation method has shown up in every project since. Alongside it: HuntOS v3 &rarr; v4 (the job-hunting platform from week one, now with named agents David and Heather), Founder Brain (a small, clean service with a local database), a deterministic combat simulator with replay and seeded randomness, plus a behavioural-intelligence framework, an author-enrichment pipeline, a beat generator, and a couple of music tools.</li>
+            <li><strong>Mar 27</strong> &mdash; First commit on ECO. The folder was opened a week earlier on Mar 19 &mdash; I didn&rsquo;t start tracking it in git until Mar 27.</li>
+            <li><strong>Apr 30</strong> &mdash; Set up the two-role agent rotation (Talos and Effy) on top of ECO.</li>
+            <li><strong>May 17</strong> &mdash; Shipped PC_HEALTH. In daily use ever since.</li>
+            <li><strong>May 26</strong> &mdash; L.I.LY hit v0.9, 139 tests passing after a safety-hardening sweep.</li>
+            <li><strong>May 27&ndash;31</strong> &mdash; ETS2LA audit campaign: four bugs closed (two are code-execution holes); report active, last updated May 31.</li>
+          </ul>
+          <p>The March prototypes mostly didn&rsquo;t ship to production, and I won&rsquo;t say they did. What they show is the climb &mdash; and that the way I run AI agents now didn&rsquo;t appear from nowhere. The role-separation method has a March prototype behind it. You can watch the same idea get sharper across every project.</p>
+        </div>
+
+        <div class="section">
+          <h2>The stack &mdash; what I write, and what I wire together</h2>
+
+          <h3>Languages I write and read in</h3>
+          <p>I&rsquo;m not claiming to be an expert in eight languages after three months. What I&rsquo;m claiming is that I can move between stacks fast enough to ship in them and to audit them.</p>
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr><th style="width:34%;">Language</th><th>Where I&rsquo;ve used it</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Python</td><td>L.I.LY, PC_HEALTH, the ETS2LA audit, most of the March work</td></tr>
+                <tr><td>Rust</td><td>ECO&rsquo;s backend</td></tr>
+                <tr><td>TypeScript</td><td>ECO</td></tr>
+                <tr><td>Svelte</td><td>ECO</td></tr>
+                <tr><td>JavaScript / HTML / CSS</td><td>Web interfaces across L.I.LY and ECO, and this site</td></tr>
+                <tr><td>PowerShell</td><td>Backup scripts, the PC_HEALTH event-log piece</td></tr>
+                <tr><td>SQL</td><td>Databases in ECO, Founder Brain, and others</td></tr>
+                <tr><td>C# (read, not written)</td><td>Reading a game&rsquo;s runtime to plan mod work</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>What I integrate &mdash; other people&rsquo;s tools, wired together right</h3>
+          <p>A lot of what I ship sits on top of open-source software other people wrote. I&rsquo;m straight about that, because picking the right tool, reading its docs, pinning a version that works, writing the glue, and documenting how to put it back when it breaks &mdash; that&rsquo;s a real skill, and it&rsquo;s one a lot of &ldquo;I built it all myself&rdquo; portfolios quietly skip. Plenty of clients have been burned by someone who rebuilt a worse version of a solved problem instead of using the tool that already works.</p>
+          <p>These are tools I integrate. They&rsquo;re not my code. I wire them in and I keep them running:</p>
+          <ul>
+            <li><strong>AI / LLM:</strong> Anthropic&rsquo;s API and the Model Context Protocol (MCP)</li>
+            <li><strong>Networking:</strong> Tailscale (private network access, so things never leave your own machines)</li>
+            <li><strong>Backup:</strong> Restic (encrypted snapshots, with a retention and restore routine I wrote)</li>
+            <li><strong>Hardware sensing:</strong> LibreHardwareMonitor, smartmontools, nvidia-smi, the Windows Event Log</li>
+            <li><strong>Voice / audio ML:</strong> XTTS-v2, faster-whisper, silero-vad</li>
+            <li><strong>Compute:</strong> PyTorch with CUDA</li>
+            <li><strong>Web frameworks:</strong> FastAPI, SvelteKit, Tauri</li>
+            <li><strong>Storage:</strong> SQLite with full-text search, Supabase</li>
+            <li><strong>Hosting:</strong> Cloudflare Pages, and self-hosted (this site)</li>
+            <li><strong>Quality and security:</strong> Playwright, Vitest, ESLint, secret-scanning</li>
+          </ul>
+
+          <h3>The discipline that isn&rsquo;t code</h3>
+          <p>Some of how I work doesn&rsquo;t show up as code at all, but it&rsquo;s where the blue-collar side earns its keep:</p>
+          <ul>
+            <li><strong>Two backup systems, both running.</strong> Daily automated snapshots of ECO since 2026-04-28 (31 dated snapshot folders on the backup drive, set-and-forget). Separately, an encrypted Restic system for L.I.LY plus my private vault &mdash; a wrapper script I wrote in PowerShell, ACL-locked passphrase, retention policy (14 daily / 8 weekly / 12 monthly), and a documented disaster-recovery flow. Two different jobs, two different shapes, both real.</li>
+            <li><strong>Verification logs and decision logs as real documents,</strong> not afterthoughts. The last verified entry is the ground truth. Every decision has a record.</li>
+            <li><strong>Method statements, sign-offs, RFIs, inspections</strong> &mdash; jobsite paperwork applied to software. When the work&rsquo;s blocked I raise it; when it&rsquo;s done I prove it.</li>
+          </ul>
+        </div>
+
+        <p class="closing-contact"><strong>Got a job that looks like one of these?</strong> <a href="work.html">Let&rsquo;s talk about it &rarr;</a></p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 TYRIEN JONES</span>
+      <span>SELF-HOSTED · GERALDTON, WA</span>
+    </div>
+  </footer>
+
+</body>
+</html>

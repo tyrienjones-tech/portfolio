@@ -1,0 +1,6 @@
+# Self-hosted web fonts go here (woff2 only). Nothing is committed yet.
+# Planned (both SIL OFL — free to self-host; download + commit, do NOT hotlink):
+#   IBMPlexMono-Regular.woff2
+#   IBMPlexMono-Medium.woff2
+#   Inter-Regular.woff2
+# After adding them, uncomment the @font-face block at the top of /assets/css/site.css.
