@@ -72,13 +72,13 @@
           <h2>The rules I run the crew under</h2>
           <p>These aren&rsquo;t theory. They came from real jobs where something went wrong and I wrote down the lesson so it wouldn&rsquo;t happen twice.</p>
           <ul>
-            <li><strong>Working version first, polish second.</strong> Ship the plain, mechanical, operator-checked version first. Make it nice after it works.</li>
-            <li><strong>One thing at a time.</strong> On staged work, I stop between batches and wait for the go-ahead. I don&rsquo;t let an agent run straight through, even on a clean job.</li>
-            <li><strong>Test the fix against real data before I write it.</strong> For any non-trivial bug, I replay it against what&rsquo;s actually on disk, check the data flow, and stress the design &mdash; before a line of the fix gets written.</li>
-            <li><strong>Five failed fixes means the problem isn&rsquo;t the code.</strong> If the same fix keeps not working, the thing I think is broken isn&rsquo;t the thing that&rsquo;s broken. I step back instead of swinging again.</li>
-            <li><strong>Hostile-input test before &ldquo;done.&rdquo;</strong> Anywhere a user or a file can put text into the system, I throw bad input at it on purpose before I call it shipped.</li>
-            <li><strong>Say up front whether a file is safe to delete.</strong> Every scratch file gets that call made out loud, so nothing important goes in the bin by accident.</li>
-            <li><strong>Write it down so the next person can pick it up cold.</strong> Human or agent. Handover docs, current-state files, decision logs, audit trails. The next person on the job shouldn&rsquo;t have to ring me to start.</li>
+            <li><span class="label">Working version first, polish second.</span> Ship the plain, mechanical, operator-checked version first. Make it nice after it works.</li>
+            <li><span class="label">One thing at a time.</span> On staged work, I stop between batches and wait for the go-ahead. I don&rsquo;t let an agent run straight through, even on a clean job.</li>
+            <li><span class="label">Test the fix against real data before I write it.</span> For any non-trivial bug, I replay it against what&rsquo;s actually on disk, check the data flow, and stress the design &mdash; before a line of the fix gets written.</li>
+            <li><span class="label">Five failed fixes means the problem isn&rsquo;t the code.</span> If the same fix keeps not working, the thing I think is broken isn&rsquo;t the thing that&rsquo;s broken. I step back instead of swinging again.</li>
+            <li><span class="label">Hostile-input test before &ldquo;done.&rdquo;</span> Anywhere a user or a file can put text into the system, I throw bad input at it on purpose before I call it shipped.</li>
+            <li><span class="label">Say up front whether a file is safe to delete.</span> Every scratch file gets that call made out loud, so nothing important goes in the bin by accident.</li>
+            <li><span class="label">Write it down so the next person can pick it up cold.</span> Human or agent. Handover docs, current-state files, decision logs, audit trails. The next person on the job shouldn&rsquo;t have to ring me to start.</li>
           </ul>
           <p>If you&rsquo;ve worked a site, you&rsquo;ll recognise the shape of all of that. Method statements, sign-offs, RFIs when you&rsquo;re blocked, a checkpoint you can&rsquo;t skip. I run software the same way.</p>
         </div>
