@@ -553,6 +553,7 @@ body.theme-portfolio { --accent:#ff9f43; --accent-dim:#e07f1f; --glass-border:rg
 body.theme-about     { --accent:#6f9bff; --accent-dim:#4e79e0; --glass-border:rgba(111,155,255,0.35); }  /* blue */
 body.theme-work      { --accent:#ff6b6b; --accent-dim:#e04f4f; --glass-border:rgba(255,107,107,0.35); }  /* red */
 body.theme-this      { --accent:#ffd166; --accent-dim:#e0b347; --glass-border:rgba(255,209,102,0.35); }  /* gold */
+body.theme-crew      { --accent:#a3e635; --accent-dim:#84cc16; --glass-border:rgba(163,230,53,0.35); }  /* yellow-green */
 
 /* ============================================================
    Reduced motion
