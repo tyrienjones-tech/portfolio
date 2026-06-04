@@ -30,6 +30,7 @@
       <a href="this-site.html">THIS SITE</a>
     </nav>
     <div class="nav-icons">
+      <span class="nav-version" title="Site version 1.0">v1.0</span>
       <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
       </a>
@@ -39,10 +40,22 @@
     </div>
   </header>
 
-  <main>
+  <main class="has-index">
+
+    <aside class="page-index" aria-label="On this page">
+      <p class="page-index-head">On this page</p>
+      <nav class="page-index-list" aria-label="Sections">
+        <a href="#top">About</a>
+        <a href="#who-i-am">Who I Am</a>
+        <a href="#using-ai">On Using AI</a>
+        <a href="#the-rules">The Rules</a>
+        <a href="#the-crew">The Crew</a>
+      </nav>
+    </aside>
+
     <section class="page-head">
       <div class="wrap">
-        <p class="eyebrow">WHO I AM</p>
+        <p class="eyebrow" id="top">WHO I AM</p>
         <h1>About</h1>
         <p class="sub">Self-taught, came up on the tools, three months into code. Who I am, how I work, and the rules I run the crew under.</p>
       </div>
@@ -51,7 +64,7 @@
     <section class="prose">
       <div class="wrap">
 
-        <div class="section">
+        <div class="section" id="who-i-am">
           <h2>Who I am, and how I work</h2>
           <p>I started writing code in February 2026. Before that I&rsquo;d never written a line.</p>
           <p>I didn&rsquo;t come up through a computer science degree, a bootcamp, or a tech job. I came up on the tools &mdash; mining, fishing, hospitality, retail, farming. Years on the frontline. I&rsquo;ve seen how real businesses actually run, how a crew actually works, how a foreman keeps a job moving, and how things break when nobody&rsquo;s paying attention.</p>
@@ -61,14 +74,14 @@
           <p>A client hiring me isn&rsquo;t hiring a junior coder catching up to other juniors. They&rsquo;re hiring an operator who knows how to direct AI work and has three months of receipts.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="using-ai">
           <h2>Yes, I used AI to make this. That&rsquo;s the point.</h2>
           <p>Someone&rsquo;s going to ask whether I really made this myself, or whether the AI did it. It&rsquo;s the wrong question, so I&rsquo;ll put the answer up front.</p>
           <p>I used AI to build this page. I use AI on everything I can. And I read every word, checked every claim, and signed off on all of it &mdash; the same way I do with code, the same way a foreman signs off on a crew&rsquo;s work before it leaves the site. That&rsquo;s not hiding behind a tool. That&rsquo;s the job. The skill was never typing every character myself. The skill is directing the work, catching what&rsquo;s wrong before it ships, and standing behind what goes out the door.</p>
           <p>I call it agentic living: use the best tools wherever they help, and stay the one in charge. If you want someone who refuses to touch AI so he can call himself pure, that&rsquo;s not me. If you want someone who uses it hard and still owns every line &mdash; that&rsquo;s exactly me. This page is the proof of it. I made it the way I&rsquo;d make yours.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="the-rules">
           <h2>The rules I run the crew under</h2>
           <p>These aren&rsquo;t theory. They came from real jobs where something went wrong and I wrote down the lesson so it wouldn&rsquo;t happen twice.</p>
           <ul>
@@ -83,7 +96,7 @@
           <p>If you&rsquo;ve worked a site, you&rsquo;ll recognise the shape of all of that. Method statements, sign-offs, RFIs when you&rsquo;re blocked, a checkpoint you can&rsquo;t skip. I run software the same way.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="the-crew">
           <h2>How I work with AI &mdash; the crew</h2>
           <p>This is the spine of everything above. I don&rsquo;t treat an AI like a magic 8-ball you shake and trust. I run them like a crew: I give each one a name, a narrow job, a written role prompt, and a checkpoint it can&rsquo;t skip &mdash; and I stay in the loop as the foreman who signs off. Let me be straight about what that is and isn&rsquo;t. The agents are Anthropic&rsquo;s, off the shelf. What&rsquo;s mine is the method around them &mdash; the role separation, the workflow rules, the prompt files, the checkpoints. That&rsquo;s light scaffolding, not a deep technical build. The one real exception is WARD, inside L.I.LY: that&rsquo;s a genuine multi-agent safety system in code &mdash; a four-tier ladder with a hash-locked rulebook &mdash; built under my direction and checkpoints, not light scaffolding. Here&rsquo;s the bird&rsquo;s-eye view.</p>
           <div class="tablewrap">

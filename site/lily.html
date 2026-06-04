@@ -30,6 +30,7 @@
       <a href="this-site.html">THIS SITE</a>
     </nav>
     <div class="nav-icons">
+      <span class="nav-version" title="Site version 1.0">v1.0</span>
       <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
       </a>
@@ -39,10 +40,21 @@
     </div>
   </header>
 
-  <main>
+  <main class="has-index">
+
+    <aside class="page-index" aria-label="On this page">
+      <p class="page-index-head">On this page</p>
+      <nav class="page-index-list" aria-label="Sections">
+        <a href="#top">L.I.LY</a>
+        <a href="#core-systems">Core Systems</a>
+        <a href="#after-hours">After-Hours</a>
+        <span class="page-index-soon">Tools<small>Coming soon</small></span>
+      </nav>
+    </aside>
+
     <section class="page-head">
       <div class="wrap">
-        <p class="eyebrow">THE LITTLE SISTER</p>
+        <p class="eyebrow" id="top">THE LITTLE SISTER</p>
         <h1>L.I.LY</h1>
         <p class="version">v0.15 · ACTIVE</p>
         <p class="sub">In plain terms: L.I.LY is a personal AI you can use from your phone, anywhere. It runs on your own computer, but you&rsquo;re not stuck at the desk to use it &mdash; you reach it from your pocket whenever you want. It&rsquo;s the lighter sister to ECO: it won&rsquo;t build software, but it&rsquo;s got a real safety crew built in, and it&rsquo;s made for everyday life &mdash; picking up a hobby, keeping an eye on your fitness or what&rsquo;s trending, learning as you go, and nudging it all toward where you want to head. More companion than tool.</p>
@@ -67,7 +79,7 @@
           <h2>What&rsquo;s inside</h2>
           <p>L.I.LY is the engine; the character runs on top of it. Here&rsquo;s what&rsquo;s in the engine &mdash; each piece doing one job, the way you&rsquo;d split a crew so nobody&rsquo;s doing two things badly. Tap any row to open the why.</p>
 
-          <div class="feature-group">
+          <div class="feature-group" id="core-systems">
             <h3 class="feature-head">CORE &mdash; the parts always running</h3>
 
             <details class="feature">
@@ -106,7 +118,7 @@
             </details>
           </div>
 
-          <div class="feature-group afterhours">
+          <div class="feature-group afterhours" id="after-hours">
             <h3 class="feature-head">AFTER-HOURS &mdash; what it does when you&rsquo;re not around</h3>
 
             <details class="feature">

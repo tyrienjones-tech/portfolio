@@ -149,6 +149,19 @@ a { color: inherit; text-decoration: none; }
 .nav-icons a:hover { color: var(--accent); border-color: var(--glass-border); }
 .nav-icons svg { width: 18px; height: 18px; }
 
+/* site version chip — muted, sits left of the icon pair */
+.nav-version {
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.12);
+  white-space: nowrap;
+}
+
 /* keyboard focus */
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--accent);
@@ -522,6 +535,115 @@ details.feature > summary:focus-visible {
   padding: var(--s-2) 0 var(--s-3);
 }
 .feature-why p { color: var(--text-muted); margin: 0; max-width: 70ch; }
+
+/* ============================================================
+   On-page index rail ("ON THIS PAGE") — opt-in via <main class="has-index">.
+   Zero JS: anchor jump links, hover/focus highlight, no scroll-spy
+   (keeps the no-JavaScript promise). Rail collapses away on mobile.
+   ============================================================ */
+main.has-index {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: var(--s-5);
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--s-3);
+  align-items: start;
+}
+main.has-index > .page-index { grid-column: 1; align-self: start; }
+main.has-index > section { grid-column: 2; }
+/* neutralise each section's inner .wrap so content fills the right column */
+main.has-index > section > .wrap { max-width: none; margin: 0; padding: 0; }
+
+.page-index {
+  position: sticky;
+  top: calc(var(--nav-h) + var(--s-2));
+  padding-top: var(--s-3);
+  font-family: var(--font-mono);
+}
+.page-index-head {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 var(--s-2);
+}
+/* the rail track: dim by default so only the SELECTED row glows
+   ("you are here"). Click-driven (:focus), recolours per page via --accent. */
+.page-index-list { position: relative; }
+.page-index a,
+.page-index-soon {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: var(--s-1) 0 var(--s-1) var(--s-3);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 150ms ease;
+}
+/* per-row line segment — the segments stack into one continuous dim track */
+.page-index a::after,
+.page-index-soon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.10);
+  transition: background 150ms ease, box-shadow 150ms ease;
+}
+/* per-row dot — dim until selected */
+.page-index a::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 1em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+  transition: background 150ms ease, opacity 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+/* the row you click (or hover) lights up; everything else stays dark */
+.page-index a:hover,
+.page-index a:focus { color: var(--accent); }
+.page-index a:hover::after,
+.page-index a:focus::after {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent-dim);
+}
+.page-index a:hover::before,
+.page-index a:focus::before {
+  background: var(--accent);
+  opacity: 1;
+  transform: scale(1.35);
+  box-shadow: 0 0 10px var(--accent);
+}
+.page-index-soon { color: rgba(154, 160, 168, 0.5); }
+.page-index-soon small {
+  display: block;
+  font-size: 0.66rem;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+/* jump targets clear the sticky nav when you land on them */
+main.has-index [id] { scroll-margin-top: calc(var(--nav-h) + var(--s-3)); }
+
+/* mobile: rail off, content full width, inner .wrap restored */
+@media (max-width: 860px) {
+  main.has-index { display: block; padding: 0; }
+  main.has-index > .page-index { display: none; }
+  main.has-index > section > .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s-3); }
+}
 
 /* ============================================================
    Footer (shared)
