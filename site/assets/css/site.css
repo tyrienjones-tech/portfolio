@@ -198,9 +198,31 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
   background: repeating-linear-gradient(135deg, var(--panel-2) 0 10px, oklch(0.22 0.006 70) 10px 20px);
 }
 
-/* ---- Screenshot --------------------------------------------- */
-.shot { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+/* ---- Screenshots -------------------------------------------- */
+/* A grid of real screens: one wide shot with a side column, then a row of
+   close-ups. Close-ups sit letterboxed on the app's own background colour,
+   so the bars read as part of the screenshot. */
+.shots { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px 16px; }
+.shot { margin: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .shot img { width: 100%; height: auto; border: 1px solid var(--line); }
+.shots .s-wide { grid-column: span 4; }
+.shots .s-side { grid-column: span 2; }
+.shot-paper, .shot-tile { position: relative; overflow: hidden; border: 1px solid var(--line); }
+.shot-paper { flex: 1; min-height: 0; background: #fff; }
+.shot-tile { aspect-ratio: 7 / 5; background: rgb(14 15 19); }
+.shot-paper img, .shot-tile img { position: absolute; inset: 0; height: 100%; border: 0; }
+.shot-paper img { object-fit: cover; object-position: top; }
+.shot-tile img { object-fit: contain; }
+.shots-note { margin-top: 20px; }
+@media (max-width: 900px) {
+  .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shots .s-wide { grid-column: 1 / -1; }
+  .shots .s-side { grid-column: auto; }
+  .shot-paper { flex: none; aspect-ratio: 7 / 5; }
+}
+@media (max-width: 640px) {
+  .shots { grid-template-columns: minmax(0, 1fr); }
+}
 
 /* ---- Spec strip (home hero) ---------------------------------- */
 .spec-strip {
