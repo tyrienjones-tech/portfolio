@@ -357,14 +357,47 @@ a.card:hover { border-color: var(--accent); opacity: 1; }
 .doc-index a .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); }
 .doc-index a:hover { color: var(--text); opacity: 1; }
 .doc-index a.btn {
-  margin-top: 24px; height: 50px; padding: 0 22px; font-size: 13px;
-  justify-content: center; font-weight: 700;
+  margin-top: 8px; height: 48px; padding: 0 22px;
+  justify-content: center;
+  font-size: 14px; font-weight: 600; letter-spacing: .04em;
   border-top: none;
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent-text);
 }
 .doc-index a.btn:hover { background: var(--accent); color: var(--bg); opacity: 1; }
+
+/* Click-follow highlight (zero JS): the .on link is the resting marker;
+   once a section is targeted via the index, the matching link takes over. */
+.doc-index a.on { color: var(--accent-text); font-weight: 600; }
+.doc:has(:target) .doc-index a.on { color: var(--soft); font-weight: 500; }
+.doc:has(#plain-terms:target) .doc-index a[href="#plain-terms"],
+.doc:has(#the-job:target) .doc-index a[href="#the-job"],
+.doc:has(#whats-mine:target) .doc-index a[href="#whats-mine"],
+.doc:has(#wired-in:target) .doc-index a[href="#wired-in"],
+.doc:has(#how-i-ran-it:target) .doc-index a[href="#how-i-ran-it"],
+.doc:has(#receipts:target) .doc-index a[href="#receipts"],
+.doc:has(#why-it-counts:target) .doc-index a[href="#why-it-counts"],
+.doc:has(#inside:target) .doc-index a[href="#inside"],
+.doc:has(#what-this-is:target) .doc-index a[href="#what-this-is"],
+.doc:has(#six-axis:target) .doc-index a[href="#six-axis"],
+.doc:has(#why-this-way:target) .doc-index a[href="#why-this-way"],
+.doc:has(#how-they-learn:target) .doc-index a[href="#how-they-learn"],
+.doc:has(#the-crew:target) .doc-index a[href="#the-crew"],
+.doc:has(#who-i-am:target) .doc-index a[href="#who-i-am"],
+.doc:has(#using-ai:target) .doc-index a[href="#using-ai"],
+.doc:has(#the-rules:target) .doc-index a[href="#the-rules"],
+.doc:has(#featured:target) .doc-index a[href="#featured"],
+.doc:has(#pc-health:target) .doc-index a[href="#pc-health"],
+.doc:has(#ets2la:target) .doc-index a[href="#ets2la"],
+.doc:has(#the-arc:target) .doc-index a[href="#the-arc"],
+.doc:has(#the-stack:target) .doc-index a[href="#the-stack"],
+.doc:has(#the-build:target) .doc-index a[href="#the-build"],
+.doc:has(#the-result:target) .doc-index a[href="#the-result"],
+.doc:has(#what-i-dont-publish:target) .doc-index a[href="#what-i-dont-publish"] {
+  color: var(--accent-text); font-weight: 600;
+}
+.doc-main [id] { scroll-margin-top: 28px; }
 .doc-main { display: flex; flex-direction: column; gap: 96px; min-width: 0; }
 
 .doc-sec { display: flex; flex-direction: column; gap: 28px; }
