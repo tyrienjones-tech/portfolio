@@ -214,6 +214,10 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
 .shot-paper img { object-fit: cover; object-position: top; }
 .shot-tile img { object-fit: contain; }
 .shots-note { margin-top: 20px; }
+/* A row of phone-size screens (L.I.LY). */
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 320px)); justify-content: center; gap: 28px; }
+.phones .shot img { border-radius: 18px; }
+@media (max-width: 640px) { .phones { grid-template-columns: minmax(0, 320px); } }
 /* Real tool output shown as text (PC_HEALTH's MCP response). Scrolls
    sideways inside its own box on narrow screens, never the page. */
 .out { margin: 0; padding: 22px 28px; overflow-x: auto; font-family: var(--font-mono); font-size: 13px; line-height: 1.65; color: var(--text); }
