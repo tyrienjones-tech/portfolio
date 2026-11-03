@@ -186,18 +186,6 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
 }
 .hero-foot b { font-size: 18px; font-weight: 500; }
 
-/* ---- Placeholder (striped) ---------------------------------- */
-.ph {
-  display: flex; align-items: center; justify-content: center;
-  background: repeating-linear-gradient(135deg, var(--warm) 0 10px, oklch(0.2 0.006 70) 10px 20px);
-  border: 1px solid var(--line);
-}
-.ph .lbl { letter-spacing: .12em; font-size: 12px; }
-.card-media.ph {
-  height: 300px; border: none; border-bottom: 1px solid var(--line);
-  background: repeating-linear-gradient(135deg, var(--panel-2) 0 10px, oklch(0.22 0.006 70) 10px 20px);
-}
-
 /* ---- Screenshots -------------------------------------------- */
 /* A grid of real screens: one wide shot with a side column, then a row of
    close-ups. Close-ups sit letterboxed on the app's own background colour,
