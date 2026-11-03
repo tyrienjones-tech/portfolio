@@ -198,6 +198,10 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
   background: repeating-linear-gradient(135deg, var(--panel-2) 0 10px, oklch(0.22 0.006 70) 10px 20px);
 }
 
+/* ---- Screenshot --------------------------------------------- */
+.shot { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.shot img { width: 100%; height: auto; border: 1px solid var(--line); }
+
 /* ---- Spec strip (home hero) ---------------------------------- */
 .spec-strip {
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
