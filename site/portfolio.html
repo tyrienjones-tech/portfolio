@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="dark">
 <title>Portfolio — Tyrien Jones</title>
 <meta name="description" content="Everything I’ve built — finished, paused, all dated. Nothing here is dressed up.">
-<link rel="stylesheet" href="assets/css/site.css?v=dfd44c19">
+<link rel="stylesheet" href="assets/css/site.css?v=260a78f5">
 </head>
 <body>
 
@@ -153,7 +153,31 @@
         <span class="lbl" style="padding:6px 10px;border:1px solid oklch(0.29 0.006 70);color:oklch(0.95 0.008 80)">IN DAILY USE</span>
         <span class="lbl" style="padding:6px 10px;border:1px solid oklch(0.29 0.006 70);color:oklch(0.95 0.008 80)">MIT LICENSED</span>
       </div>
-      <div class="ph" style="height:360px"><span class="lbl" style="text-align:center;padding:0 24px">SCREENSHOT · PC_HEALTH SNAPSHOT / MCP OUTPUT</span></div>
+      <figure class="shot">
+        <div class="panel">
+          <div class="panel-bar"><span class="lbl" style="text-transform:none;color:oklch(0.78 0.15 52)">get_current_health</span><span class="lbl">REAL RESPONSE FROM MY PC · 3 NOV 2026 · EXCERPT</span></div>
+<pre class="out">{
+  <span class="k">"freshness"</span>: { <span class="k">"live"</span>: "fresh", <span class="k">"smart"</span>: "fresh", <span class="k">"events"</span>: "fresh" },
+  <span class="k">"data"</span>: {
+    <span class="k">"smart"</span>: { <span class="k">"drives"</span>: [
+      { <span class="k">"model"</span>: "Corsair Force GS", <span class="k">"drive_type"</span>: "ata", <span class="k">"smart_status_passed"</span>: true,
+        <span class="k">"power_on_hours"</span>: 18937, <span class="k">"temperature_c"</span>: 26,
+        <span class="flag">"reallocated_sectors": 1, "has_uncorrected_errors": true</span>, <span class="k">"wear_warning"</span>: false },
+      { <span class="k">"model"</span>: "KINGSTON SFYRD2000G", <span class="k">"drive_type"</span>: "nvme", <span class="k">"smart_status_passed"</span>: true,
+        <span class="k">"power_on_hours"</span>: 7100, <span class="k">"temperature_c"</span>: 41, <span class="k">"percentage_used"</span>: 2,
+        <span class="k">"available_spare"</span>: 100, <span class="k">"media_errors"</span>: 0, <span class="k">"wear_warning"</span>: false }
+    ] },
+    <span class="k">"live"</span>: { <span class="k">"gpus"</span>: [
+      { <span class="k">"name"</span>: "NVIDIA GeForce RTX 3060", <span class="k">"power_draw_w"</span>: 16.96, <span class="k">"power_limit_w"</span>: 137.7,
+        <span class="k">"throttle_hw_thermal"</span>: false, <span class="k">"throttle_hw_power_brake"</span>: false }
+    ] },
+    <span class="k">"events"</span>: { <span class="k">"lookback_hours"</span>: 24,
+      <span class="k">"headline"</span>: "Headline: clean window &mdash; no critical hardware events" }
+  }
+}</pre>
+        </div>
+        <figcaption class="lbl">What an AI gets from the MCP server · drive serials and the GPU&rsquo;s ID left out · highlighted: the older SSD&rsquo;s flags</figcaption>
+      </figure>
       <p class="lede">A longevity monitor for Windows PCs.</p>
       <div class="prose">
         <p><strong style="color:oklch(0.95 0.008 80)">The job.</strong> Watch the health of a Windows PC over time — drive wear, temperatures, GPU, and system errors — and keep a timestamped record so you can see trouble coming before a drive dies on you. Read-only by design: there&rsquo;s exactly one network call in the whole tool, to a sensor service on my own machine. Nothing leaves the box.</p>
