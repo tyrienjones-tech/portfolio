@@ -198,10 +198,10 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
   background: repeating-linear-gradient(135deg, var(--panel-2) 0 10px, oklch(0.22 0.006 70) 10px 20px);
 }
 
-/* ---- Spec strip (under hero photo) --------------------------- */
+/* ---- Spec strip (home hero) ---------------------------------- */
 .spec-strip {
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
-  background: var(--panel); border: 1px solid var(--line); border-top: none;
+  background: var(--panel); border: 1px solid var(--line);
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -277,13 +277,7 @@ a.card:hover { border-color: var(--accent); opacity: 1; }
 .split { display: grid; gap: 80px; align-items: start; }
 .split.s-12 { grid-template-columns: minmax(0,1fr) minmax(0,2fr); }
 .split.s-21 { grid-template-columns: minmax(0,2fr) minmax(0,1fr); }
-.hero-media { display: flex; flex-direction: column; }
-.hero-media .ph { flex: 1; min-height: 560px; }
-
-/* ---- Photo strip (About) ---------------------------------------- */
-.photo-strip { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 16px; }
-@media (max-width: 1100px) { .photo-strip { grid-template-columns: repeat(3, minmax(0,1fr)); } }
-@media (max-width: 640px)  { .photo-strip { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.hero-media { display: flex; flex-direction: column; justify-content: flex-end; }
 
 /* ---- Section headers ------------------------------------------- */
 .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
@@ -518,6 +512,12 @@ details.reg .reg-body { padding: 0 26px 24px; color: var(--body-2); max-width: 7
   padding-right: max(var(--gut), calc((100% - 1440px) / 2));
 }
 
+/* ---- Portfolio job register: stack rows before the columns get squeezed */
+@media (max-width: 900px) {
+  .reg-row { grid-template-columns: minmax(0,1fr) !important; gap: 6px !important; }
+  .reg-row > span:last-child { display: none; }
+}
+
 /* ---- Mobile (HANDOFF §6) --------------------------------------------- */
 @media (max-width: 1100px) {
   :root { --gut: 32px; }
@@ -526,7 +526,6 @@ details.reg .reg-body { padding: 0 26px 24px; color: var(--body-2); max-width: 7
   .doc { grid-template-columns: minmax(0,1fr); gap: 48px; }
   .doc-index { position: static; }
   .split, .split.s-12, .split.s-21 { grid-template-columns: minmax(0,1fr); gap: 48px; }
-  .hero-media .ph { min-height: 380px; }
 }
 @media (max-width: 640px) {
   :root { --gut: 16px; --nav-h: auto; }
