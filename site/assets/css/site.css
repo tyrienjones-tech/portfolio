@@ -1,7 +1,7 @@
 /* ============================================================
    Tyrien Jones — shared stylesheet (all pages use this one file)
    v2 "Site Documentation" redesign — 2026-11.
-   Static. Self-hosted. No CDNs, no remote fonts, no third-party.
+   Static. Fonts self-hosted. No remote fonts, no third-party requests.
    Lives at /assets/css/site.css — paths below are relative to HERE.
    ============================================================ */
 
@@ -157,6 +157,7 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
 }
 .stamp b {
   font-family: var(--font-head); font-weight: 800; font-size: 22px; letter-spacing: 0;
+  white-space: nowrap;
 }
 
 /* ---- Sections / hero ---------------------------------------- */
@@ -339,8 +340,8 @@ a.card:hover { border-color: var(--accent); opacity: 1; }
 /* ---- Doc layout (sticky index + reading column) ------------------- */
 .doc {
   padding: 0 var(--gut) 120px;
-  display: grid; grid-template-columns: 260px minmax(0,1fr);
-  gap: 80px; align-items: start;
+  display: grid; grid-template-columns: 200px minmax(0,1fr);
+  gap: 56px; align-items: start;
 }
 .doc-index {
   position: sticky; top: 32px;
@@ -367,37 +368,107 @@ a.card:hover { border-color: var(--accent); opacity: 1; }
 }
 .doc-index a.btn:hover { background: var(--accent); color: var(--bg); opacity: 1; }
 
-/* Click-follow highlight (zero JS): the .on link is the resting marker;
-   once a section is targeted via the index, the matching link takes over. */
-.doc-index a.on { color: var(--accent-text); font-weight: 600; }
-.doc:has(:target) .doc-index a.on { color: var(--soft); font-weight: 500; }
-.doc:has(#plain-terms:target) .doc-index a[href="#plain-terms"],
-.doc:has(#the-job:target) .doc-index a[href="#the-job"],
-.doc:has(#whats-mine:target) .doc-index a[href="#whats-mine"],
-.doc:has(#wired-in:target) .doc-index a[href="#wired-in"],
-.doc:has(#how-i-ran-it:target) .doc-index a[href="#how-i-ran-it"],
-.doc:has(#receipts:target) .doc-index a[href="#receipts"],
-.doc:has(#why-it-counts:target) .doc-index a[href="#why-it-counts"],
-.doc:has(#inside:target) .doc-index a[href="#inside"],
-.doc:has(#what-this-is:target) .doc-index a[href="#what-this-is"],
-.doc:has(#six-axis:target) .doc-index a[href="#six-axis"],
-.doc:has(#why-this-way:target) .doc-index a[href="#why-this-way"],
-.doc:has(#how-they-learn:target) .doc-index a[href="#how-they-learn"],
-.doc:has(#the-crew:target) .doc-index a[href="#the-crew"],
-.doc:has(#who-i-am:target) .doc-index a[href="#who-i-am"],
-.doc:has(#using-ai:target) .doc-index a[href="#using-ai"],
-.doc:has(#the-rules:target) .doc-index a[href="#the-rules"],
-.doc:has(#featured:target) .doc-index a[href="#featured"],
-.doc:has(#pc-health:target) .doc-index a[href="#pc-health"],
-.doc:has(#ets2la:target) .doc-index a[href="#ets2la"],
-.doc:has(#the-arc:target) .doc-index a[href="#the-arc"],
-.doc:has(#the-stack:target) .doc-index a[href="#the-stack"],
-.doc:has(#the-build:target) .doc-index a[href="#the-build"],
-.doc:has(#the-result:target) .doc-index a[href="#the-result"],
-.doc:has(#what-i-dont-publish:target) .doc-index a[href="#what-i-dont-publish"] {
-  color: var(--accent-text); font-weight: 600;
+/* Index highlight, zero JS. Where the browser supports scroll-driven
+   animations, the link for the section crossing ~35% of the viewport lights up
+   as you scroll. Elsewhere it falls back to click-follow via :has(:target). */
+@keyframes idx-on { from, to { color: var(--accent-text); font-weight: 600; } }
+@supports (animation-timeline: view()) {
+  .doc { timeline-scope: --s-ets2la, --s-featured, --s-how-i-ran-it, --s-how-they-learn, --s-inside, --s-next, --s-operational-core, --s-paused-builds, --s-pc-control-hub, --s-pc-health, --s-plain-terms, --s-receipts, --s-six-axis, --s-the-arc, --s-the-build, --s-the-crew, --s-the-job, --s-the-result, --s-the-rules, --s-the-stack, --s-using-ai, --s-what-i-dont-publish, --s-what-this-is, --s-whats-mine, --s-who-i-am, --s-why-it-counts, --s-why-this-way, --s-wired-in; }
+  .doc-sec { view-timeline-axis: block; view-timeline-inset: 35% 64%; }
+  #ets2la { view-timeline-name: --s-ets2la; }
+  #featured { view-timeline-name: --s-featured; }
+  #how-i-ran-it { view-timeline-name: --s-how-i-ran-it; }
+  #how-they-learn { view-timeline-name: --s-how-they-learn; }
+  #inside { view-timeline-name: --s-inside; }
+  #next { view-timeline-name: --s-next; }
+  #operational-core { view-timeline-name: --s-operational-core; }
+  #paused-builds { view-timeline-name: --s-paused-builds; }
+  #pc-control-hub { view-timeline-name: --s-pc-control-hub; }
+  #pc-health { view-timeline-name: --s-pc-health; }
+  #plain-terms { view-timeline-name: --s-plain-terms; }
+  #receipts { view-timeline-name: --s-receipts; }
+  #six-axis { view-timeline-name: --s-six-axis; }
+  #the-arc { view-timeline-name: --s-the-arc; }
+  #the-build { view-timeline-name: --s-the-build; }
+  #the-crew { view-timeline-name: --s-the-crew; }
+  #the-job { view-timeline-name: --s-the-job; }
+  #the-result { view-timeline-name: --s-the-result; }
+  #the-rules { view-timeline-name: --s-the-rules; }
+  #the-stack { view-timeline-name: --s-the-stack; }
+  #using-ai { view-timeline-name: --s-using-ai; }
+  #what-i-dont-publish { view-timeline-name: --s-what-i-dont-publish; }
+  #what-this-is { view-timeline-name: --s-what-this-is; }
+  #whats-mine { view-timeline-name: --s-whats-mine; }
+  #who-i-am { view-timeline-name: --s-who-i-am; }
+  #why-it-counts { view-timeline-name: --s-why-it-counts; }
+  #why-this-way { view-timeline-name: --s-why-this-way; }
+  #wired-in { view-timeline-name: --s-wired-in; }
+  .doc-index a[href^="#"] { animation: idx-on linear none; animation-range: cover 0% cover 100%; }
+  .doc-index a[href="#ets2la"] { animation-timeline: --s-ets2la; }
+  .doc-index a[href="#featured"] { animation-timeline: --s-featured; }
+  .doc-index a[href="#how-i-ran-it"] { animation-timeline: --s-how-i-ran-it; }
+  .doc-index a[href="#how-they-learn"] { animation-timeline: --s-how-they-learn; }
+  .doc-index a[href="#inside"] { animation-timeline: --s-inside; }
+  .doc-index a[href="#next"] { animation-timeline: --s-next; }
+  .doc-index a[href="#operational-core"] { animation-timeline: --s-operational-core; }
+  .doc-index a[href="#paused-builds"] { animation-timeline: --s-paused-builds; }
+  .doc-index a[href="#pc-control-hub"] { animation-timeline: --s-pc-control-hub; }
+  .doc-index a[href="#pc-health"] { animation-timeline: --s-pc-health; }
+  .doc-index a[href="#plain-terms"] { animation-timeline: --s-plain-terms; }
+  .doc-index a[href="#receipts"] { animation-timeline: --s-receipts; }
+  .doc-index a[href="#six-axis"] { animation-timeline: --s-six-axis; }
+  .doc-index a[href="#the-arc"] { animation-timeline: --s-the-arc; }
+  .doc-index a[href="#the-build"] { animation-timeline: --s-the-build; }
+  .doc-index a[href="#the-crew"] { animation-timeline: --s-the-crew; }
+  .doc-index a[href="#the-job"] { animation-timeline: --s-the-job; }
+  .doc-index a[href="#the-result"] { animation-timeline: --s-the-result; }
+  .doc-index a[href="#the-rules"] { animation-timeline: --s-the-rules; }
+  .doc-index a[href="#the-stack"] { animation-timeline: --s-the-stack; }
+  .doc-index a[href="#using-ai"] { animation-timeline: --s-using-ai; }
+  .doc-index a[href="#what-i-dont-publish"] { animation-timeline: --s-what-i-dont-publish; }
+  .doc-index a[href="#what-this-is"] { animation-timeline: --s-what-this-is; }
+  .doc-index a[href="#whats-mine"] { animation-timeline: --s-whats-mine; }
+  .doc-index a[href="#who-i-am"] { animation-timeline: --s-who-i-am; }
+  .doc-index a[href="#why-it-counts"] { animation-timeline: --s-why-it-counts; }
+  .doc-index a[href="#why-this-way"] { animation-timeline: --s-why-this-way; }
+  .doc-index a[href="#wired-in"] { animation-timeline: --s-wired-in; }
+}
+@supports not (animation-timeline: view()) {
+  .doc-index a.on { color: var(--accent-text); font-weight: 600; }
+  .doc:has(:target) .doc-index a.on { color: var(--soft); font-weight: 500; }
+  .doc:has(#ets2la:target) .doc-index a[href="#ets2la"],
+  .doc:has(#featured:target) .doc-index a[href="#featured"],
+  .doc:has(#how-i-ran-it:target) .doc-index a[href="#how-i-ran-it"],
+  .doc:has(#how-they-learn:target) .doc-index a[href="#how-they-learn"],
+  .doc:has(#inside:target) .doc-index a[href="#inside"],
+  .doc:has(#next:target) .doc-index a[href="#next"],
+  .doc:has(#operational-core:target) .doc-index a[href="#operational-core"],
+  .doc:has(#paused-builds:target) .doc-index a[href="#paused-builds"],
+  .doc:has(#pc-control-hub:target) .doc-index a[href="#pc-control-hub"],
+  .doc:has(#pc-health:target) .doc-index a[href="#pc-health"],
+  .doc:has(#plain-terms:target) .doc-index a[href="#plain-terms"],
+  .doc:has(#receipts:target) .doc-index a[href="#receipts"],
+  .doc:has(#six-axis:target) .doc-index a[href="#six-axis"],
+  .doc:has(#the-arc:target) .doc-index a[href="#the-arc"],
+  .doc:has(#the-build:target) .doc-index a[href="#the-build"],
+  .doc:has(#the-crew:target) .doc-index a[href="#the-crew"],
+  .doc:has(#the-job:target) .doc-index a[href="#the-job"],
+  .doc:has(#the-result:target) .doc-index a[href="#the-result"],
+  .doc:has(#the-rules:target) .doc-index a[href="#the-rules"],
+  .doc:has(#the-stack:target) .doc-index a[href="#the-stack"],
+  .doc:has(#using-ai:target) .doc-index a[href="#using-ai"],
+  .doc:has(#what-i-dont-publish:target) .doc-index a[href="#what-i-dont-publish"],
+  .doc:has(#what-this-is:target) .doc-index a[href="#what-this-is"],
+  .doc:has(#whats-mine:target) .doc-index a[href="#whats-mine"],
+  .doc:has(#who-i-am:target) .doc-index a[href="#who-i-am"],
+  .doc:has(#why-it-counts:target) .doc-index a[href="#why-it-counts"],
+  .doc:has(#why-this-way:target) .doc-index a[href="#why-this-way"],
+  .doc:has(#wired-in:target) .doc-index a[href="#wired-in"] {
+    color: var(--accent-text); font-weight: 600;
+  }
 }
 .doc-main [id] { scroll-margin-top: 28px; }
+.doc-main p, .doc-main .lede { max-width: 72ch; }
 .doc-main { display: flex; flex-direction: column; gap: 96px; min-width: 0; }
 
 .doc-sec { display: flex; flex-direction: column; gap: 28px; }
@@ -441,6 +512,12 @@ details.reg .reg-body { padding: 0 26px 24px; color: var(--body-2); max-width: 7
 .pn a:hover { background: var(--panel); opacity: 1; }
 .pn b { font-weight: 700; font-stretch: 82%; font-size: 30px; }
 
+/* ---- Wide screens: full-width bands, content centred past 1440px ------ */
+.site-head, .hero, .page-head, .sec, .sec-band, .cta, .doc, .site-foot {
+  padding-left: max(var(--gut), calc((100% - 1440px) / 2));
+  padding-right: max(var(--gut), calc((100% - 1440px) / 2));
+}
+
 /* ---- Mobile (HANDOFF §6) --------------------------------------------- */
 @media (max-width: 1100px) {
   :root { --gut: 32px; }
@@ -470,10 +547,18 @@ details.reg .reg-body { padding: 0 26px 24px; color: var(--body-2); max-width: 7
   .sheet > .s-h { display: none; }
   .sheet > div { padding: 14px 18px; border-bottom: none; }
   .sheet .row-end { border-bottom: 1px solid var(--line-2) !important; padding-bottom: 20px; margin-bottom: 6px; }
-  .card-title { font-size: 44px; }
+  .card-title { font-size: clamp(32px, 11vw, 44px); }
   .spec-strip { grid-template-columns: minmax(0,1fr); }
   .spec-strip > div { border-right: none; border-bottom: 1px solid var(--line); }
   .spec-strip > div:last-child { border-bottom: none; }
+  .spec-panel { grid-template-columns: minmax(0,1fr); }
+  .spec-panel > div { border-right: none; }
+  .card-top { flex-wrap: wrap; }
+  details.reg summary > span { grid-template-columns: minmax(0,1fr) !important; gap: 4px !important; }
+  /* Inline multi-column grids that must collapse on phones */
+  .stack-sm { grid-template-columns: minmax(0,1fr) !important; }
+  .two-sm { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  .flush-sm > * { padding-left: 0 !important; padding-right: 0 !important; border-right: none !important; }
   .pn { grid-template-columns: minmax(0,1fr); }
   .pn a + a { border-left: none; border-top: 1px solid var(--line-head); }
   .stats { gap: 24px; }
