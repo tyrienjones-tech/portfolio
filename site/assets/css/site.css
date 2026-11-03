@@ -214,6 +214,18 @@ p  { margin: 0; color: var(--body); text-wrap: pretty; }
 .shot-paper img { object-fit: cover; object-position: top; }
 .shot-tile img { object-fit: contain; }
 .shots-note { margin-top: 20px; }
+/* Screenshot filling a card's media side (home page). */
+.card-shot { position: relative; overflow: hidden; background: rgb(14 15 19); border-right: 1px solid var(--line); }
+.card-shot img { width: 100%; height: 100%; object-fit: contain; }
+.card-shot-tag { position: absolute; top: 12px; right: 12px; padding: 5px 8px; background: var(--bg); border: 1px solid var(--line); }
+/* The card stacks once it can't fit two 420px columns: the shot then sits
+   on top, and the tag drops into a strip under it. */
+.card:has(> .card-shot) { container-type: inline-size; }
+@container (width < 840px) {
+  .card-shot { border-right: 0; border-bottom: 1px solid var(--line); }
+  .card-shot img { height: auto; }
+  .card-shot-tag { position: static; display: block; border: 0; border-top: 1px solid var(--line); padding: 10px 16px; }
+}
 @media (max-width: 900px) {
   .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .shots .s-wide { grid-column: 1 / -1; }
