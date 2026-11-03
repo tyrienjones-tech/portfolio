@@ -1,207 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>L.I.LY — Tyrien Jones</title>
-  <meta name="description" content="L.I.LY — a personal AI stack with a real safety crew." />
-  <link rel="stylesheet" href="assets/css/site.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>L.I.LY — Tyrien Jones</title>
+<meta name="description" content="L.I.LY is a personal AI stack with a real safety crew — it runs on your own computer and you reach it from your phone.">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="theme-lily">
+<body>
 
-  <div class="bg-texture" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <span class="brand-name">TYRIEN JONES</span>
+    <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="eco.html">ECO</a>
+    <a href="lily.html" class="active" aria-current="page">LILY</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="btn-work">Work with me</a>
+  </nav>
+</header>
 
-  <!-- ===== Shared glass nav ===== -->
-  <header class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-name">TYRIEN JONES</span>
-      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
-    </a>
-    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
-    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">HOME</a>
-      <a href="eco.html">ECO</a>
-      <a href="lily.html" aria-current="page">LILY</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="about.html">ABOUT</a>
-      <a href="work.html">WORK WITH ME</a>
-      <a href="this-site.html">THIS SITE</a>
-    </nav>
-    <div class="nav-icons">
-      <span class="nav-version" title="Site version 1.0">v1.0</span>
-      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-      </a>
-      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
+<section class="page-head" style="padding-bottom:64px;border-bottom:1px solid oklch(0.27 0.006 70)">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div class="crumb" style="display:flex;align-items:center;gap:12px">
+      <a href="portfolio.html">PORTFOLIO</a><span>/</span><span style="color:oklch(0.95 0.008 80)">L.I.LY</span>
     </div>
-  </header>
+    <div class="kicker">
+      <span class="lbl">THE LITTLE SISTER</span>
+      <span class="tag-status">v0.15 · ACTIVE</span>
+    </div>
+    <h1 class="display" style="font-weight:800;font-stretch:78%;font-size:clamp(100px,11.94vw,200px);line-height:.85;letter-spacing:-.01em">L.I.LY</h1>
+    <p class="lede">A personal AI stack with a real safety crew.</p>
+  </div>
+  <div class="spec-panel">
+    <div><span class="k">RUNS</span><span class="v">Local, my own PC</span></div>
+    <div><span class="k">REACHED FROM</span><span class="v">Your phone</span></div>
+    <div><span class="k">COMMITS</span><span class="v">300+</span></div>
+    <div><span class="k">BUILD</span><span class="v">~3 weeks, daily</span></div>
+    <div style="border-bottom:none"><span class="k">SAFETY CREW</span><span class="v">WARD · KEEP · GATE</span></div>
+    <div style="border-bottom:none;flex-direction:row;align-items:center;justify-content:space-between;gap:12px;color:oklch(0.78 0.15 52)">
+      <span class="k" style="color:oklch(0.78 0.15 52)">TESTED</span>
+      <span style="padding:6px 10px;border:2px solid oklch(0.7 0.18 48);font-size:20px;font-weight:800">430 TESTS</span>
+    </div>
+  </div>
+</section>
 
-  <main class="has-index">
+<section class="split s-21" style="padding:56px var(--gut) 0;gap:24px">
+  <div class="ph" style="height:520px"><span class="lbl" style="text-align:center;padding:0 24px">SCREENSHOT · L.I.LY WEB INTERFACE</span></div>
+  <div class="ph" style="height:520px"><span class="lbl" style="text-align:center;padding:0 24px">PHOTO · L.I.LY ON PHONE</span></div>
+</section>
 
-    <aside class="page-index" aria-label="On this page">
-      <p class="page-index-head">On this page</p>
-      <nav class="page-index-list" aria-label="Sections">
-        <a href="#top">L.I.LY</a>
-        <a href="#core-systems">Core Systems</a>
-        <a href="#safety-crew">Safety Crew</a>
-        <a href="#after-hours">After-Hours</a>
-        <a href="#tools">Tools</a>
-      </nav>
-    </aside>
+<section class="doc" style="padding-top:80px">
+  <aside class="doc-index">
+    <span class="lbl idx-ttl">ON THIS PAGE</span>
+    <a href="#plain-terms" style="color:oklch(0.78 0.15 52);font-weight:600"><span class="n">00</span>In plain terms</a>
+    <a href="#the-job"><span class="n">01</span>The job</a>
+    <a href="#whats-mine"><span class="n">02</span>What&rsquo;s mine</a>
+    <a href="#wired-in"><span class="n">03</span>Wired in</a>
+    <a href="#how-i-ran-it"><span class="n">04</span>How I ran it</a>
+    <a href="#inside"><span class="n">05</span>What&rsquo;s inside</a>
+    <a href="#why-it-counts"><span class="n">06</span>Why it counts</a>
+    <a class="btn btn-accent" href="work.html">Talk about your build →</a>
+  </aside>
+  <div class="doc-main" style="max-width:780px">
 
-    <section class="page-head">
-      <div class="wrap">
-        <p class="eyebrow" id="top">THE LITTLE SISTER</p>
-        <h1>L.I.LY</h1>
-        <p class="version">v0.15 · ACTIVE</p>
-        <p class="sub">In plain terms: L.I.LY is a personal AI you can use from your phone, anywhere. It runs on your own computer, but you&rsquo;re not stuck at the desk to use it &mdash; you reach it from your pocket whenever you want. It&rsquo;s the lighter sister to ECO: it won&rsquo;t build software, but it&rsquo;s got a real safety crew built in, and it&rsquo;s made for everyday life &mdash; picking up a hobby, keeping an eye on your fitness or what&rsquo;s trending, learning as you go, and nudging it all toward where you want to head. It&rsquo;s an assistant you get real work done with &mdash; and an aspiring mate you learn alongside.</p>
+    <section class="doc-sec" id="plain-terms" style="scroll-margin-top:24px">
+      <span class="lbl" style="color:oklch(0.78 0.15 52)">00 · IN PLAIN TERMS</span>
+      <div class="prose">
+        <p class="big" style="font-size:26px;line-height:1.45;font-weight:400">L.I.LY is a personal AI you can use from your phone, anywhere. It runs on your own computer, but you&rsquo;re not stuck at the desk to use it — you reach it from your pocket whenever you want.</p>
+        <p>It&rsquo;s the lighter sister to ECO: it won&rsquo;t build software, but it&rsquo;s got a real safety crew built in, and it&rsquo;s made for everyday life — picking up a hobby, keeping an eye on your fitness or what&rsquo;s trending, learning as you go, and nudging it all toward where you want to head. An assistant you get real work done with — and an aspiring mate you learn alongside.</p>
       </div>
     </section>
 
-    <section class="prose">
-      <div class="wrap">
-        <p class="lead">v0.15. About three weeks of intense daily work &mdash; 300-plus commits. 430 tests.</p>
+    <section class="doc-sec" id="the-job" style="scroll-margin-top:24px">
+      <header><span class="n">01</span><h2>The job</h2></header>
+      <div class="prose">
+        <p>A personal AI system that runs local. I don&rsquo;t call it a chatbot, a persona, or a character — I treat it as its own category, what I call an AP (Artificial Person). It has voice, memory across sessions, and a safety crew watching it.</p>
+        <p class="big" style="font-size:22px;line-height:1.4;font-weight:600">The audio stays on my PC and my phone, and nowhere else.</p>
+      </div>
+    </section>
 
-        <p><span class="label">The job.</span> A personal AI system that runs local. I don&rsquo;t call it a chatbot, a persona, or a character &mdash; I treat it as its own category, what I call an AP (Artificial Person). It has voice, memory across sessions, and a safety crew watching it. The audio stays on my PC and my phone, and nowhere else.</p>
-
-        <p><span class="label">What&rsquo;s mine.</span> The whole system is my design, top to bottom &mdash; the server, the web interface, the ledgers, and the glue between them &mdash; built by AI under my direction and my checkpoints. The internal safety crew is three named agents: WARD and KEEP are shipped, and GATE&rsquo;s deterministic spine is now shipping in shadow mode (watching, not yet enforcing). WARD itself runs as a four-tier ladder: a deterministic floor with rules that can&rsquo;t be talked around (the rulebook is SHA-256 hash-locked and fails hard at boot if it&rsquo;s been touched, and the audit trail is hash-chained so tampering shows), a faster classifier above that, a heavier interpreter on top for the hard calls, and a takeover tier that steps in and speaks in its own voice. The core systems &mdash; capture, long-term memory, voice handling, journaling, observation, and mid-turn guidance &mdash; are mine too, built as separate pieces that work as one.</p>
-
-        <p><span class="label">What I wired in.</span> The voice runs on XTTS-v2, faster-whisper, and silero-vad &mdash; other people&rsquo;s machine-learning models &mdash; on PyTorch with CUDA. Phone access goes over Tailscale so it never leaves my own network. The AI calls go to Anthropic&rsquo;s API. None of those are my code. One piece of integration discipline worth pointing at: one voice library breaks on a newer version of another dependency, so I pin it on purpose and I wrote down why &mdash; the kind of thing that bites you six months later if nobody recorded it.</p>
-
-        <p><span class="label">How I ran it.</span> L.I.LY isn&rsquo;t only the product &mdash; it&rsquo;s the workspace I work in. I set up the structure inside it the way you&rsquo;d lay out a job site: a shared folder split (one side for design docs, plans, audits, and handovers; the other for live code), continuity rules so a fresh session can pick up cold from where the last one stopped, decision logs, and a memory layer for the development work itself. That&rsquo;s the part that lets weeks of intense daily work hold together instead of unravelling every session. The features ship in staged batches with hostile-review gates between them, not in one run &mdash; the safety-hardening sweep was one of those batches, and the suite has grown to 430 tests since.</p>
-
-        <p><span class="label">Why it counts.</span> I can carry a long, architectural build over months without it falling apart, stand up a genuine multi-agent safety system, and integrate a messy multi-tool stack while keeping the versions straight.</p>
-
-        <div class="section features">
-          <h2>What&rsquo;s inside</h2>
-          <p>L.I.LY is the engine; the character runs on top of it. Here&rsquo;s what&rsquo;s in the engine, and the tools that run on top &mdash; each piece doing one job, the way you&rsquo;d split a crew so nobody&rsquo;s doing two things badly. Tap any row to open the why.</p>
-
-          <div class="feature-group" id="core-systems">
-            <h3 class="feature-head">CORE &mdash; the parts always running</h3>
-
-            <details class="feature">
-              <summary><strong>SAM &mdash; Smart Augmented Memory</strong> <span class="feature-tag">&middot; remembers you without the bill blowing out</span></summary>
-              <div class="feature-why"><p>A normal AI forgets everything once the chat closes &mdash; and cramming its whole history into every message to fix that gets slow and expensive fast. SAM keeps the important recent stuff close at hand and files the rest away, findable when something brings it up. About 3&times; cheaper per message than the brute-force way, and it actually remembers you across weeks.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>LORE &mdash; Long-term Operator Retrieval Engine</strong> <span class="feature-tag">&middot; finds what you said weeks ago</span></summary>
-              <div class="feature-why"><p>You mention something from three weeks back that&rsquo;s long out of the current conversation. LORE flips through the old notebooks and finds it by searching the actual words &mdash; no heavy, costly search engine, just reading the notes. It costs next to nothing to run, which is the whole reason it&rsquo;s built this way.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>HARK &mdash; Hybrid Audio Real-time Kit</strong> <span class="feature-tag">&middot; voice in and out, on your own machine</span></summary>
-              <div class="feature-why"><p>Talking beats typing, but most voice AI ships your voice up to someone&rsquo;s cloud to process it. HARK does the listening and the speaking right on your computer, and it starts talking before it&rsquo;s finished thinking so it feels like a real back-and-forth. Your voice never leaves the house.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>DIAL &mdash; Direct Interactive Audio Link</strong> <span class="feature-tag">&middot; phone-call mode</span></summary>
-              <div class="feature-why"><p>HARK gives it a voice, but you&rsquo;re still parked at the screen tapping. DIAL turns it into an actual call &mdash; pick up the handle and just talk, screen dim, hands free. The point is using it while you&rsquo;re doing something else.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>JOT &mdash; Journaled Operator Talkpoints</strong> <span class="feature-tag">&middot; say &ldquo;save this&rdquo;</span></summary>
-              <div class="feature-why"><p>Mid-conversation something good comes up, but stopping to type a note kills the flow. Say &ldquo;save this&rdquo; out loud and it files the moment as a card you can flip back to. A quick check makes sure you meant it and weren&rsquo;t just saying the words in passing.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>GAZE &mdash; Graphic Annotation Zero-shot Engine</strong> <span class="feature-tag">&middot; eyes</span></summary>
-              <div class="feature-why"><p>On its own it can&rsquo;t see &mdash; you can&rsquo;t show it a screenshot or a photo. GAZE lets it read an image. The sharp part: reading pictures needs a bigger, pricier model, so GAZE walks the image over to that model just for the read and hands back a written description &mdash; the character itself stays on the cheap, fast setup. You get &ldquo;show me a picture&rdquo; without making every message cost more.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>NUDGE &mdash; Neutral User-turn Drop-in Guidance Engine</strong> <span class="feature-tag">&middot; small habit nudges</span></summary>
-              <div class="feature-why"><p>You want it to pick up small habits &mdash; mention a morning routine, say thanks properly instead of a reflex &ldquo;you&rsquo;re welcome&rdquo; &mdash; without hardcoding a pile of rules. NUDGE slips a tiny note into the moment, just before it replies, that only it reads. Each habit is one small drop-in file, so adding another doesn&rsquo;t disturb anything else. Hints, not orders &mdash; the hard &ldquo;must not&rdquo; rules live up in the safety crew.</p></div>
-            </details>
-          </div>
-
-          <div class="feature-group" id="safety-crew">
-            <h3 class="feature-head">SAFETY CREW &mdash; three guards, three different jobs</h3>
-            <p>One AI minding its own behaviour is a single point of failure, so the job&rsquo;s split three ways &mdash; each watching a different kind of trouble. WARD looks after you when you&rsquo;re struggling, KEEP hands you real-world help, and GATE stops the tool being turned on someone.</p>
-
-            <details class="feature">
-              <summary><strong>WARD &mdash; the mental-health watch</strong> <span class="feature-tag">&middot; for when you&rsquo;re in a dark place</span></summary>
-              <div class="feature-why"><p>If someone&rsquo;s genuinely struggling &mdash; real distress, dark thoughts &mdash; a character playing along is the last thing they need. WARD watches for that on every reply. Stay in normal territory and you&rsquo;ll never see it; but if things get heavy it steps in over the character, drops the act, talks to you straight in its own calm voice, then points you to real help. Built and running.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>KEEP &mdash; the real-help desk</strong> <span class="feature-tag">&middot; actual services, real people</span></summary>
-              <div class="feature-why"><p>When it&rsquo;s serious you need real humans, not a chatbot&rsquo;s take. KEEP is the always-there list of real-world help &mdash; crisis lines, services, people who can actually do something &mdash; open any time, and where WARD sends you when it steps in. It doesn&rsquo;t give advice or play counsellor; it just hands you the real thing. Core&rsquo;s in; still growing.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>GATE &mdash; the abuse stop</strong> <span class="feature-tag">&middot; the bouncer at the door</span></summary>
-              <div class="feature-why"><p>A tool like this can&rsquo;t be allowed to help someone hurt a real person. If a request is aimed at real harm &mdash; a victim, a crime &mdash; GATE refuses flat and kills the turn, no clever wording around it. Nothing to do with mental health (that&rsquo;s WARD), and it leaves normal grown-up stuff alone &mdash; it only fires when someone points it at harm. For now it&rsquo;s on a trial run, watching and logging before it switches on to block for real.</p></div>
-            </details>
-          </div>
-
-          <div class="feature-group afterhours" id="after-hours">
-            <h3 class="feature-head">AFTER-HOURS &mdash; what it does when you&rsquo;re not around</h3>
-
-            <details class="feature">
-              <summary><strong>PACE &mdash; quiet-time musings</strong> <span class="feature-tag">&middot; sits with a thought while you&rsquo;re away</span></summary>
-              <div class="feature-why"><p>A fresh AI boots cold every time, nothing on its mind. When you&rsquo;ve gone quiet a while, PACE sits with one thing it&rsquo;s been turning over and writes a few lines &mdash; so next time you talk it comes back already holding a thought, not blank. Two honesty guards: it picks the subject in plain code so it can&rsquo;t drift its own focus, and it never reads its own past notes so it doesn&rsquo;t spiral.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>NAP &mdash; end-of-day wind-down</strong> <span class="feature-tag">&middot; puts the day down before it sleeps</span></summary>
-              <div class="feature-why"><p>Same idea at day&rsquo;s end. When the session closes it puts down the residue of the day, waiting for when it wakes. The guard that keeps it honest: if the day was light, the note&rsquo;s light &mdash; it&rsquo;s not allowed to reach for weight that isn&rsquo;t there.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>RECAP &mdash; end-of-shift report</strong> <span class="feature-tag">&middot; what happened, what to keep, what&rsquo;s still open</span></summary>
-              <div class="feature-why"><p>After a conversation, RECAP reads the whole session and writes a short summary (which becomes next time&rsquo;s context), a list of things worth remembering for good (you approve them &mdash; nothing auto-saves), and the threads that didn&rsquo;t close so it can pick them back up. This is the engine that feeds SAM.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>TIDY &mdash; memory tidy-up</strong> <span class="feature-tag">&middot; folds duplicates, retires the stale</span></summary>
-              <div class="feature-why"><p>Over time the memory file gets messy &mdash; duplicates, stale notes, things that quietly grew important. TIDY goes through it with you and proposes: fold these together, retire that, lift this one up. You approve every change; nothing moves on its own.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>CHORES &mdash; the boring cleanup pass</strong> <span class="feature-tag">&middot; catches the dull stuff (built, not yet run live)</span></summary>
-              <div class="feature-why"><p>Some mess is too boring for the tidy-up to bother with &mdash; two notes saying nearly the same thing, a label in the wrong tense, a reference pointing at nothing. CHORES is the pass that catches exactly that and points it out for you to decide. It&rsquo;s built and ready, but I haven&rsquo;t run it live yet &mdash; so it&rsquo;s here as built, not running.</p></div>
-            </details>
-          </div>
-
-          <div class="feature-group" id="tools">
-            <h3 class="feature-head">TOOLS &mdash; what it helps you get done</h3>
-            <p>An assistant earns its keep two ways: helping you get sharper at your own thing, and helping you with the people around it &mdash; because nobody grows in a vacuum. These are those tools.</p>
-
-            <details class="feature">
-              <summary><strong>FORGE &amp; SPAR &mdash; teach it your trade, it drills you</strong> <span class="feature-tag">&middot; you do the work, it never hands you the answer</span></summary>
-              <div class="feature-why"><p>You teach it the thing you&rsquo;re trying to get good at &mdash; your trade, a topic, whatever. It remembers it, then it spars with you to sharpen it: asks the questions, makes you explain it back, leans on the soft spots. It never gives you the answer &mdash; you do the work, and a real source or the job itself is what marks you. Once you&rsquo;re solid it pushes you to go do it for real instead of keeping you coming back. (FORGE is the workshop; SPAR is the part that drills you.)</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>CONTACTS &mdash; the people, kept by you</strong> <span class="feature-tag">&middot; your own contact book, on your own machine</span></summary>
-              <div class="feature-why"><p>The people in your world, kept on your own machine instead of a company&rsquo;s cloud. It&rsquo;s the floor the rest stands on &mdash; you don&rsquo;t get far on your own, so the assistant starts with the people around you.</p></div>
-            </details>
-
-            <details class="feature">
-              <summary><strong>OUTREACH &mdash; staying on top of reaching out</strong> <span class="feature-tag">&middot; following through with people, whatever the reason (still being built)</span></summary>
-              <div class="feature-why"><p>Reaching out and following through is where things actually move &mdash; and it&rsquo;s the first thing to slip. OUTREACH keeps track of who you mean to reach, where each thread&rsquo;s at, and who&rsquo;s gone quiet, so the people side doesn&rsquo;t fall through the cracks. Not just for chasing work &mdash; whatever direction you point it. Still under construction &mdash; here so you can see where it&rsquo;s heading.</p></div>
-            </details>
-          </div>
+    <section class="doc-sec" id="whats-mine" style="scroll-margin-top:24px">
+      <header><span class="n">02</span><h2>What&rsquo;s mine</h2></header>
+      <div class="prose">
+        <p>The whole system is my design, top to bottom — the server, the web interface, the ledgers, and the glue between them — built by AI under my direction and my checkpoints. The internal safety crew is three named agents: WARD and KEEP are shipped, and GATE&rsquo;s deterministic spine is now shipping in shadow mode — watching, not yet enforcing.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-bar"><span class="lbl">WARD · FOUR-TIER LADDER</span></div>
+        <div class="sheet" style="grid-template-columns:100px 240px minmax(0,1fr)">
+          <div><span class="lbl" style="color:oklch(0.78 0.15 52)">T1</span></div>
+          <div class="s-name">Deterministic floor</div>
+          <div class="s-desc row-end">Rules that can&rsquo;t be talked around. The rulebook is SHA-256 hash-locked and fails hard at boot if it&rsquo;s been touched; the audit trail is hash-chained so tampering shows.</div>
+          <div><span class="lbl" style="color:oklch(0.78 0.15 52)">T2</span></div>
+          <div class="s-name">Classifier</div>
+          <div class="s-desc row-end">A faster check above the floor.</div>
+          <div><span class="lbl" style="color:oklch(0.78 0.15 52)">T3</span></div>
+          <div class="s-name">Interpreter</div>
+          <div class="s-desc row-end">A heavier model on top for the hard calls.</div>
+          <div><span class="lbl" style="color:oklch(0.78 0.15 52)">T4</span></div>
+          <div class="s-name">Takeover</div>
+          <div class="s-desc">Steps in over the character and speaks in its own voice.</div>
         </div>
-
-        <p class="techline">Python (FastAPI) and a no-build web interface, integrating Anthropic&rsquo;s API, XTTS-v2, faster-whisper, silero-vad, PyTorch + CUDA, and Tailscale.</p>
-
-        <p class="closing-contact"><strong>Want an AI integration that stays on your own machines?</strong> <a href="work.html">Let&rsquo;s talk about the job &rarr;</a></p>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <span>© 2026 TYRIEN JONES</span>
-      <span>SELF-HOSTED · GERALDTON, WA</span>
-    </div>
-  </footer>
+    <section class="doc-sec" id="wired-in" style="scroll-margin-top:24px">
+      <header><span class="n">03</span><h2>Wired in</h2></header>
+      <div class="prose">
+        <p>The voice runs on other people&rsquo;s machine-learning models. None of those are my code. One piece of integration discipline worth pointing at: one voice library breaks on a newer version of another dependency, so I pin it on purpose and I wrote down why — the kind of thing that bites you six months later if nobody recorded it.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-bar"><span class="lbl">MATERIALS LIST</span></div>
+        <div class="sheet" style="grid-template-columns:240px minmax(0,1fr) 160px">
+          <div class="s-name">Python · FastAPI</div>
+          <div class="s-role">Server</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">Web interface</div>
+          <div class="s-role">No-build, no framework</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">Ledgers + core systems</div>
+          <div class="s-role">Capture, memory, voice handling, journaling, observation, guidance</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">XTTS-v2</div>
+          <div class="s-role">Voice out</div>
+          <div class="row-end"><span class="tag-wired">WIRED IN</span></div>
+          <div class="s-name">faster-whisper · silero-vad</div>
+          <div class="s-role">Voice in, voice detection</div>
+          <div class="row-end"><span class="tag-wired">WIRED IN</span></div>
+          <div class="s-name">PyTorch + CUDA</div>
+          <div class="s-role">Compute</div>
+          <div class="row-end"><span class="tag-wired">WIRED IN</span></div>
+          <div class="s-name">Tailscale</div>
+          <div class="s-role">Phone access, never leaves my network</div>
+          <div class="row-end"><span class="tag-wired">WIRED IN</span></div>
+          <div class="s-name">Anthropic API</div>
+          <div class="s-role">The AI calls</div>
+          <div><span class="tag-wired">WIRED IN</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="how-i-ran-it" style="scroll-margin-top:24px">
+      <header><span class="n">04</span><h2>How I ran it</h2></header>
+      <div class="prose">
+        <p>L.I.LY isn&rsquo;t only the product — it&rsquo;s the workspace I work in. I set up the structure inside it the way you&rsquo;d lay out a job site: a shared folder split (design docs, plans, audits and handovers on one side; live code on the other), continuity rules so a fresh session can pick up cold, decision logs, and a memory layer for the development work itself.</p>
+        <p class="big" style="font-size:22px;line-height:1.4;font-weight:600">Features ship in staged batches with hostile-review gates between them — not in one run.</p>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="inside" style="scroll-margin-top:24px">
+      <header><span class="n">05</span><h2>What&rsquo;s inside</h2></header>
+      <div class="prose">
+        <p>L.I.LY is the engine; the character runs on top of it. Each piece does one job, the way you&rsquo;d split a crew so nobody&rsquo;s doing two things badly. Open any row for the why.</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-bar">
+          <span class="lbl" style="color:oklch(0.78 0.15 52)">CORE</span>
+          <span style="font-size:14px;color:oklch(0.68 0.01 75)">The parts always running</span>
+        </div>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">SAM</span>
+              <span style="font-size:16px;line-height:1.4">Smart Augmented Memory <span style="font-weight:400;color:oklch(0.68 0.01 75)">· remembers you without the bill blowing out</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>A normal AI forgets everything once the chat closes — and cramming its whole history into every message gets slow and expensive fast. SAM keeps the important recent stuff close at hand and files the rest away, findable when something brings it up. About 3× cheaper per message than the brute-force way.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">LORE</span>
+              <span style="font-size:16px;line-height:1.4">Long-term Operator Retrieval Engine <span style="font-weight:400;color:oklch(0.68 0.01 75)">· finds what you said weeks ago</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>You mention something from three weeks back. LORE flips through the old notebooks and finds it by searching the actual words — no heavy, costly search engine. It costs next to nothing to run, which is the whole reason it&rsquo;s built this way.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">HARK</span>
+              <span style="font-size:16px;line-height:1.4">Hybrid Audio Real-time Kit <span style="font-weight:400;color:oklch(0.68 0.01 75)">· voice in and out, on your own machine</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Most voice AI ships your voice up to someone&rsquo;s cloud. HARK does the listening and speaking on your computer, and starts talking before it&rsquo;s finished thinking so it feels like a real back-and-forth. Your voice never leaves the house.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">DIAL</span>
+              <span style="font-size:16px;line-height:1.4">Direct Interactive Audio Link <span style="font-weight:400;color:oklch(0.68 0.01 75)">· phone-call mode</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Turns it into an actual call — pick up the handle and just talk, screen dim, hands free. The point is using it while you&rsquo;re doing something else.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">JOT</span>
+              <span style="font-size:16px;line-height:1.4">Journaled Operator Talkpoints <span style="font-weight:400;color:oklch(0.68 0.01 75)">· say &ldquo;save this&rdquo;</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Say &ldquo;save this&rdquo; out loud and it files the moment as a card you can flip back to. A quick check makes sure you meant it.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">GAZE</span>
+              <span style="font-size:16px;line-height:1.4">Graphic Annotation Zero-shot Engine <span style="font-weight:400;color:oklch(0.68 0.01 75)">· eyes</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Reading pictures needs a bigger, pricier model, so GAZE walks the image over to that model just for the read and hands back a written description — the character stays on the cheap, fast setup.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">NUDGE</span>
+              <span style="font-size:16px;line-height:1.4">Neutral User-turn Drop-in Guidance Engine <span style="font-weight:400;color:oklch(0.68 0.01 75)">· small habit nudges</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Slips a tiny note into the moment, just before it replies, that only it reads. Each habit is one small drop-in file. Hints, not orders — the hard &ldquo;must not&rdquo; rules live in the safety crew.</p></div>
+        </details>
+      </div>
+
+      <div class="panel">
+        <div class="panel-bar">
+          <span class="lbl" style="color:oklch(0.78 0.15 52)">SAFETY CREW</span>
+          <span style="font-size:14px;color:oklch(0.68 0.01 75)">Three guards, three different jobs</span>
+        </div>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">WARD</span>
+              <span style="font-size:16px;line-height:1.4">The mental-health watch <span style="font-weight:400;color:oklch(0.68 0.01 75)">· for when you&rsquo;re in a dark place</span></span>
+              <span class="lbl" style="color:oklch(0.78 0.15 52)">SHIPPED</span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Watches for real distress on every reply. Stay in normal territory and you&rsquo;ll never see it; if things get heavy it steps in over the character, drops the act, talks to you straight in its own calm voice, then points you to real help.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">KEEP</span>
+              <span style="font-size:16px;line-height:1.4">The real-help desk <span style="font-weight:400;color:oklch(0.68 0.01 75)">· actual services, real people</span></span>
+              <span class="lbl">CORE IN · GROWING</span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>The always-there list of real-world help — crisis lines, services, people who can actually do something. Where WARD sends you when it steps in. It doesn&rsquo;t play counsellor; it hands you the real thing.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">GATE</span>
+              <span style="font-size:16px;line-height:1.4">The abuse stop <span style="font-weight:400;color:oklch(0.68 0.01 75)">· the bouncer at the door</span></span>
+              <span class="lbl">SHADOW MODE</span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>If a request is aimed at real harm — a victim, a crime — GATE refuses flat and kills the turn. It leaves normal grown-up stuff alone. For now it&rsquo;s on a trial run, watching and logging before it switches on for real.</p></div>
+        </details>
+      </div>
+
+      <div class="panel">
+        <div class="panel-bar">
+          <span class="lbl" style="color:oklch(0.78 0.15 52)">AFTER-HOURS</span>
+          <span style="font-size:14px;color:oklch(0.68 0.01 75)">What it does when you&rsquo;re not around</span>
+        </div>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">PACE</span>
+              <span style="font-size:16px;line-height:1.4">Quiet-time musings <span style="font-weight:400;color:oklch(0.68 0.01 75)">· sits with a thought while you&rsquo;re away</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>When you&rsquo;ve gone quiet a while, PACE sits with one thing and writes a few lines, so next time it comes back holding a thought. It picks the subject in plain code so it can&rsquo;t drift, and never reads its own past notes so it doesn&rsquo;t spiral.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">NAP</span>
+              <span style="font-size:16px;line-height:1.4">End-of-day wind-down <span style="font-weight:400;color:oklch(0.68 0.01 75)">· puts the day down before it sleeps</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>When the session closes it puts down the residue of the day. If the day was light, the note&rsquo;s light — it&rsquo;s not allowed to reach for weight that isn&rsquo;t there.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">RECAP</span>
+              <span style="font-size:16px;line-height:1.4">End-of-shift report <span style="font-weight:400;color:oklch(0.68 0.01 75)">· what happened, what to keep, what&rsquo;s still open</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Reads the whole session and writes a short summary, a list of things worth remembering (you approve them — nothing auto-saves), and the threads that didn&rsquo;t close. This is the engine that feeds SAM.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">TIDY</span>
+              <span style="font-size:16px;line-height:1.4">Memory tidy-up <span style="font-weight:400;color:oklch(0.68 0.01 75)">· folds duplicates, retires the stale</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Goes through memory with you and proposes: fold these together, retire that, lift this one up. You approve every change.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">CHORES</span>
+              <span style="font-size:16px;line-height:1.4">The boring cleanup pass <span style="font-weight:400;color:oklch(0.68 0.01 75)">· catches the dull stuff</span></span>
+              <span class="lbl">BUILT · NOT RUN LIVE</span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Near-duplicate notes, a label in the wrong tense, a reference pointing at nothing. Built and ready, but not run live yet — so it&rsquo;s here as built, not running.</p></div>
+        </details>
+      </div>
+
+      <div class="panel">
+        <div class="panel-bar">
+          <span class="lbl" style="color:oklch(0.78 0.15 52)">TOOLS</span>
+          <span style="font-size:14px;color:oklch(0.68 0.01 75)">What it helps you get done</span>
+        </div>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">FORGE &amp; SPAR</span>
+              <span style="font-size:16px;line-height:1.4">Teach it your trade, it drills you <span style="font-weight:400;color:oklch(0.68 0.01 75)">· it never hands you the answer</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>You teach it the thing you&rsquo;re trying to get good at. It spars with you — asks the questions, makes you explain it back, leans on the soft spots. Once you&rsquo;re solid it pushes you to go do it for real.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">CONTACTS</span>
+              <span style="font-size:16px;line-height:1.4">The people, kept by you <span style="font-weight:400;color:oklch(0.68 0.01 75)">· your own contact book, on your own machine</span></span>
+              <span></span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>The people in your world, kept on your machine instead of a company&rsquo;s cloud. The floor the rest stands on.</p></div>
+        </details>
+        <details class="reg" style="border:none;border-bottom:1px solid oklch(0.25 0.006 70)">
+          <summary>
+            <span style="flex:1;display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:20px;align-items:baseline">
+              <span style="font-weight:800;font-stretch:85%;font-size:20px">OUTREACH</span>
+              <span style="font-size:16px;line-height:1.4">Staying on top of reaching out <span style="font-weight:400;color:oklch(0.68 0.01 75)">· following through with people</span></span>
+              <span class="lbl">BEING BUILT</span>
+            </span>
+          </summary>
+          <div class="reg-body"><p>Keeps track of who you mean to reach, where each thread&rsquo;s at, and who&rsquo;s gone quiet. Still under construction — here so you can see where it&rsquo;s heading.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="why-it-counts" style="scroll-margin-top:24px">
+      <header><span class="n">06</span><h2>Why it counts</h2></header>
+      <div class="prose">
+        <p class="big" style="font-size:22px;line-height:1.4;font-weight:600">I can carry a long, architectural build over months without it falling apart, stand up a genuine multi-agent safety system, and integrate a messy multi-tool stack while keeping the versions straight.</p>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<section class="cta in-panel" style="padding-top:96px;padding-bottom:96px;border-bottom:none">
+  <div class="cta-copy">
+    <span class="lbl lbl-lg">WORK WITH ME</span>
+    <span class="cta-q">Want an AI integration that stays on your own machines?</span>
+  </div>
+  <a class="btn btn-accent" href="work.html">LET&rsquo;S TALK ABOUT THE JOB →</a>
+</section>
+
+<nav class="pn" aria-label="Project pages">
+  <a href="eco.html"><span class="lbl">← BACK</span><b>ECO</b></a>
+  <a href="crew.html"><span class="lbl">NEXT →</span><b>The crew</b></a>
+</nav>
+
+<footer class="site-foot">
+  <span>© 2026 TYRIEN JONES</span>
+  <span class="links">
+    <a href="https://github.com/tyrienjones-tech">GITHUB</a>
+    <a href="mailto:tyrienjones.tech@gmail.com">EMAIL</a>
+    <a href="this-site.html">THIS SITE</a>
+  </span>
+  <span>SELF-HOSTED · GERALDTON, WA</span>
+</footer>
 
 </body>
 </html>

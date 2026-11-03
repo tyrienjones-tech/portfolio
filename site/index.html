@@ -1,82 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>Tyrien Jones — AI Engineer · Foreman</title>
-  <meta name="description" content="I run a crew of AI agents. I'm the foreman. They do the work — I call the shots and catch the mistakes." />
-  <link rel="stylesheet" href="assets/css/site.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Tyrien Jones — AI Engineer · Foreman</title>
+<meta name="description" content="I run a crew of AI agents. I'm the foreman. They do the work — I call the shots and catch the mistakes.">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="theme-home">
+<body>
 
-  <!-- decorative right-side texture (drop circuit.svg into /assets/img/ + uncomment in site.css) -->
-  <div class="bg-texture" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <span class="brand-name">TYRIEN JONES</span>
+    <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="eco.html">ECO</a>
+    <a href="lily.html">LILY</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="btn-work">Work with me</a>
+  </nav>
+</header>
 
-  <!-- ===== Shared glass nav (identical on every page; only aria-current changes) ===== -->
-  <header class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-name">TYRIEN JONES</span>
-      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
-    </a>
-
-    <!-- zero-JS mobile toggle -->
-    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
-    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" aria-current="page">HOME</a>
-      <a href="eco.html">ECO</a>
-      <a href="lily.html">LILY</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="about.html">ABOUT</a>
-      <a href="work.html">WORK WITH ME</a>
-      <a href="this-site.html">THIS SITE</a>
-    </nav>
-
-    <div class="nav-icons">
-      <span class="nav-version" title="Site version 1.0">v1.0</span>
-      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-      </a>
-      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">
+      <span class="lbl lbl-lg">THE FOREMAN</span>
+      <span class="tag-status">STATUS: ON THE TOOLS</span>
     </div>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">THE FOREMAN</p>
-        <h1>I run a <span class="accent">crew</span> of AI agents.</h1>
-        <p class="sub">
-          They do the work — I call the shots and catch the mistakes.<br />
-          Came up on the tools — now I build the tools.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="crew.html">MEET THE CREW
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-secondary" href="portfolio.html">VIEW THE WORK
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-          </a>
-        </div>
-        <p class="status">
-          <span class="lead">&gt; STATUS:</span> ON THE TOOLS<span class="caret" aria-hidden="true"></span>
-        </p>
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <h1 class="display">I run a crew of AI agents.</h1>
+      <p class="hero-lede">They do the work — I call the shots and catch the mistakes.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-accent" href="crew.html">MEET THE CREW →</a>
+        <a class="btn btn-ghost" href="portfolio.html">VIEW THE WORK</a>
       </div>
-    </section>
-  </main>
-
-  <!-- ===== Shared footer (identical on every page) ===== -->
-  <footer class="footer">
-    <div class="wrap">
-      <span>© 2026 TYRIEN JONES</span>
-      <span>SELF-HOSTED · GERALDTON, WA</span>
+      <div class="hero-foot">
+        <span class="lbl">BACKGROUND</span>
+        <b>Came up on the tools — now I build the tools.</b>
+      </div>
     </div>
-  </footer>
+  </div>
+  <div class="hero-media">
+    <div class="ph"><span class="lbl">PHOTO · TYRIEN ON SITE / HANDS ON TOOLS</span></div>
+    <div class="spec-strip">
+      <div><span>FOREMAN</span><span>T. JONES</span></div>
+      <div><span>SITE</span><span>GERALDTON, WA</span></div>
+      <div><span>HOSTING</span><span>SELF-HOSTED</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="panel">
+    <div class="panel-bar">
+      <span class="ttl">CREW ROSTER</span>
+      <span class="lbl">EACH ONE ANSWERS TO ME</span>
+    </div>
+    <div class="sheet" style="grid-template-columns:220px 200px minmax(0,1fr)">
+      <div class="s-h">ROLE</div>
+      <div class="s-h">NAME</div>
+      <div class="s-h">SCOPE</div>
+      <div class="s-role hl">Foreman</div>
+      <div class="s-name">Tyrien Jones</div>
+      <div class="s-desc row-end">Final say on every commit, every decision, every risk.</div>
+      <div class="s-role">Strategy &amp; audit</div>
+      <div class="s-name">Talos</div>
+      <div class="s-desc row-end">Sets direction with me and audits the others&rsquo; work before it lands.</div>
+      <div class="s-role">Build</div>
+      <div class="s-name">Effy</div>
+      <div class="s-desc">Senior engineer on ECO. Features, debugging, the daily work of making it real.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="display:flex;flex-direction:column;gap:40px">
+  <div class="sec-head">
+    <h2>On the bench</h2>
+    <span class="sub">Two builds. Not finished — and not pretending to be.</span>
+  </div>
+  <div class="card-grid">
+    <a class="card" href="eco.html">
+      <div class="card-media ph"><span class="lbl">SCREENSHOT · ECO DESKTOP APP</span></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span class="lbl">FLAGSHIP · v0.2 · ACTIVE DEV</span>
+            <span class="card-title">ECO</span>
+          </div>
+          <span class="stamp"><span>VERIFIED</span><b>450+</b><span>PROOFS</span></span>
+        </div>
+        <p class="card-desc">A local-first control plane for governing AI-assisted builds on long, complex jobs.</p>
+        <div class="stats">
+          <div class="stat"><b>267</b><span>commits since March</span></div>
+          <div class="stat"><b>677</b><span>Rust tests passing</span></div>
+          <span class="stat-link">Read the job →</span>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="lily.html">
+      <div class="card-media ph"><span class="lbl">SCREENSHOT · L.I.LY ON PHONE</span></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span class="lbl">THE LITTLE SISTER · v0.15 · ACTIVE</span>
+            <span class="card-title">L.I.LY</span>
+          </div>
+          <span class="stamp"><span>TESTED</span><b>430</b><span>TESTS</span></span>
+        </div>
+        <p class="card-desc">A personal AI stack with a real safety crew.</p>
+        <div class="stats">
+          <div class="stat"><b>300+</b><span>commits</span></div>
+          <div class="stat"><b>3</b><span>safety agents · WARD, KEEP, GATE</span></div>
+          <span class="stat-link">Read the job →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="sec-band split s-12">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <h2>How a job runs</h2>
+    <p style="font-size:18px;color:oklch(0.75 0.01 75)">Any well-run shop splits it the same way.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="n">01</span>
+      <span class="t">Someone plans.</span>
+      <span class="d">Talos sets direction with me and audits the work.</span>
+    </div>
+    <div class="step">
+      <span class="n">02</span>
+      <span class="t">Someone builds.</span>
+      <span class="d">Effy does the daily work of making it real.</span>
+    </div>
+    <div class="step hl">
+      <span class="n">03</span>
+      <span class="t">The boss signs off.</span>
+      <span class="d">The pre-commit review is a hard stop. Nothing gets committed without my sign-off.</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-copy">
+    <span class="lbl lbl-lg">WORK WITH ME</span>
+    <span class="cta-q">Got a long build that has to stay coherent across more than one AI?</span>
+  </div>
+  <a class="btn btn-accent" href="work.html">LET&rsquo;S TALK ABOUT THE JOB →</a>
+</section>
+
+<footer class="site-foot">
+  <span>© 2026 TYRIEN JONES</span>
+  <span class="links">
+    <a href="https://github.com/tyrienjones-tech">GITHUB</a>
+    <a href="mailto:tyrienjones.tech@gmail.com">EMAIL</a>
+    <a href="this-site.html">THIS SITE</a>
+  </span>
+  <span>SELF-HOSTED · GERALDTON, WA</span>
+</footer>
 
 </body>
 </html>

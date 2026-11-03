@@ -7,39 +7,48 @@
   <meta name="robots" content="noindex" />
   <title>Page not found — Tyrien Jones</title>
   <!-- Self-contained inline styles (no external file) so this renders correctly
-       at any not-found path, with zero dependencies. Matches the site theme. -->
+       at any not-found path, with zero dependencies. Matches the v2 site theme. -->
   <style>
-    :root { --bg:#0d0f12; --text:#e8eaed; --muted:#9aa0a8; --accent:#3ddc97; }
+    :root {
+      --bg: oklch(0.17 0.006 70);
+      --text: oklch(0.95 0.008 80);
+      --muted: oklch(0.68 0.01 75);
+      --accent: oklch(0.70 0.18 48);
+      --accent-hi: oklch(0.76 0.17 52);
+      --accent-text: oklch(0.78 0.15 52);
+    }
     *,*::before,*::after { box-sizing:border-box; }
     body {
       margin:0; min-height:100vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       background:var(--bg); color:var(--text);
-      font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-family:"Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       line-height:1.6; padding:0 1.5rem; text-align:center;
       -webkit-font-smoothing:antialiased;
     }
     .code {
       font-family:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
-      color:var(--accent); letter-spacing:0.2em; font-size:0.8rem; margin-bottom:1rem;
+      color:var(--accent-text); letter-spacing:0.2em; font-size:0.8rem; margin-bottom:1rem;
+      border:1px solid var(--accent); padding:0.45rem 0.8rem;
     }
     h1 {
-      font-family:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
-      font-weight:500; font-size:clamp(2rem,6vw,3.2rem); margin:0 0 1rem;
+      font-weight:700; font-stretch:82%;
+      font-size:clamp(2.6rem,8vw,4.5rem); line-height:.95; margin:0 0 1rem;
+      letter-spacing:-.01em;
     }
-    p { color:var(--muted); max-width:46ch; margin:0 0 1.75rem; }
+    p { color:var(--muted); max-width:46ch; margin:0 0 1.75rem; font-size:1.05rem; }
     a.home {
       font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-      font-size:0.85rem; letter-spacing:0.08em;
-      color:#07120c; background:var(--accent); border:1px solid var(--accent);
-      padding:0.7rem 1.2rem; border-radius:12px; text-decoration:none;
+      font-size:0.85rem; letter-spacing:0.08em; font-weight:600;
+      color:var(--bg); background:var(--accent);
+      padding:0.85rem 1.4rem; text-decoration:none;
     }
-    a.home:hover { background:#4ef0a8; }
+    a.home:hover { background:var(--accent-hi); }
     a.home:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
   </style>
 </head>
 <body>
-  <p class="code">&gt; ERROR 404</p>
+  <p class="code">ERROR 404</p>
   <h1>Page not found.</h1>
   <p>That page doesn&rsquo;t exist on this site. No harm done &mdash; head back to the front.</p>
   <a class="home" href="/">&larr; BACK TO THE SITE</a>

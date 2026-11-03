@@ -1,98 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>ECO — Tyrien Jones</title>
-  <meta name="description" content="ECO — a local-first control plane for governing AI-assisted builds on long, complex jobs." />
-  <link rel="stylesheet" href="assets/css/site.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>ECO — Tyrien Jones</title>
+<meta name="description" content="ECO — a local-first control plane for governing AI-assisted builds on long, complex jobs.">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="theme-eco">
+<body>
 
-  <div class="bg-texture" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <span class="brand-name">TYRIEN JONES</span>
+    <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="eco.html" class="active" aria-current="page">ECO</a>
+    <a href="lily.html">LILY</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="btn-work">Work with me</a>
+  </nav>
+</header>
 
-  <!-- ===== Shared glass nav ===== -->
-  <header class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-name">TYRIEN JONES</span>
-      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
-    </a>
-    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
-    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">HOME</a>
-      <a href="eco.html" aria-current="page">ECO</a>
-      <a href="lily.html">LILY</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="about.html">ABOUT</a>
-      <a href="work.html">WORK WITH ME</a>
-      <a href="this-site.html">THIS SITE</a>
-    </nav>
-    <div class="nav-icons">
-      <span class="nav-version" title="Site version 1.0">v1.0</span>
-      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-      </a>
-      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
+<section class="page-head" style="border-bottom:1px solid oklch(0.27 0.006 70)">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div class="crumb"><a href="portfolio.html">PORTFOLIO</a> / <span style="color:oklch(0.95 0.008 80)">ECO</span></div>
+    <div class="kicker">
+      <span class="lbl lbl-lg">FLAGSHIP · BIG BROTHER</span>
+      <span class="tag-status" style="text-transform:none">v0.2 · MILESTONE 1 COMPLETE · ACTIVE DEV</span>
     </div>
-  </header>
+    <h1 class="display" style="font-weight:800;font-stretch:78%;font-size:clamp(100px,11.94vw,200px);line-height:.82;letter-spacing:-.01em">ECO</h1>
+    <p class="lede" style="max-width:680px">A local-first control plane for governing AI-assisted builds on long, complex jobs.</p>
+  </div>
+  <div class="spec-panel">
+    <div><span class="k">STARTED</span><span class="v">March 2026</span></div>
+    <div><span class="k">RUNS</span><span class="v">Local, my machine</span></div>
+    <div><span class="k">COMMITS</span><span class="v">267</span></div>
+    <div><span class="k">RUST TESTS</span><span class="v">677 passing</span></div>
+    <div style="border-bottom:none"><span class="k">CREW</span><span class="v">Talos · Effy</span></div>
+    <div style="flex-direction:row;align-items:center;justify-content:space-between;gap:12px;border-bottom:none"><span class="k" style="color:oklch(0.78 0.15 52)">VERIFIED</span><span class="stamp"><b>450+ PROOFS</b></span></div>
+  </div>
+</section>
 
-  <main class="has-index">
+<section class="sec" style="padding-top:56px;padding-bottom:0">
+  <div class="ph" style="height:520px"><span class="lbl">SCREENSHOT · ECO MAIN SCREEN, FULL WIDTH</span></div>
+</section>
 
-    <aside class="page-index" aria-label="On this page">
-      <p class="page-index-head">On this page</p>
-      <nav class="page-index-list" aria-label="Sections">
-        <a href="#top">ECO</a>
-        <a href="#the-job">The Job</a>
-        <a href="#whats-mine">What&rsquo;s Mine</a>
-        <a href="#wired-in">Wired In</a>
-        <a href="#how-i-ran-it">How I Ran It</a>
-        <a href="#receipts">The Receipts</a>
-        <a href="#why-it-counts">Why It Counts</a>
-      </nav>
-    </aside>
+<section class="doc" style="padding-top:80px">
+  <aside class="doc-index">
+    <span class="lbl idx-ttl">ON THIS PAGE</span>
+    <a href="#plain-terms" style="color:oklch(0.78 0.15 52);font-weight:600"><span class="n">00</span>In plain terms</a>
+    <a href="#the-job"><span class="n">01</span>The job</a>
+    <a href="#whats-mine"><span class="n">02</span>What&rsquo;s mine</a>
+    <a href="#wired-in"><span class="n">03</span>Wired in</a>
+    <a href="#how-i-ran-it"><span class="n">04</span>How I ran it</a>
+    <a href="#receipts"><span class="n">05</span>The receipts</a>
+    <a href="#why-it-counts"><span class="n">06</span>Why it counts</a>
+    <a class="btn btn-accent" href="work.html">Talk about your build →</a>
+  </aside>
 
-    <section class="page-head">
-      <div class="wrap">
-        <p class="eyebrow" id="top">FLAGSHIP · BIG BROTHER</p>
-        <h1>ECO</h1>
-        <p class="version">v0.2 · MILESTONE 1 COMPLETE · ACTIVE DEV</p>
-        <p class="sub">In plain terms: ECO is a dedicated workspace for getting real software built with AI &mdash; with you in charge the whole way. It keeps the AI on a leash so it can take on long, complicated jobs without wandering off or quietly breaking things, and nothing it does counts until you&rsquo;ve checked it and signed off. It&rsquo;s the sit-down, focused tool &mdash; the kind of workspace you open when there&rsquo;s serious work to do.</p>
-      </div>
-    </section>
+  <div class="doc-main" style="max-width:780px">
 
-    <section class="prose">
-      <div class="wrap">
-        <p class="lead">My biggest project, and the one I&rsquo;m proudest of. In active development since March 2026 &mdash; 267 commits deep, 677 Rust tests passing. It&rsquo;s not finished, and I&rsquo;m not going to pretend it is. That&rsquo;s the point of putting it here.</p>
-
-        <p id="the-job"><span class="label">The job.</span> When a build runs long and the work gets complex, it goes sideways in the same few ways every time. Different AI models end up touching the same code &mdash; ChatGPT, Claude across versions, Sonnet, the agents I&rsquo;ve named &mdash; and it still has to read like one hand wrote it. The truth about where things stand gets scattered across chat windows that vanish the moment you close them. And the second you let the agents run themselves, you lose the thread on what was actually checked. ECO is the control plane that keeps all of that in line: one verified place where the truth lives, the human as the final word on every commit, every decision, every risk, verification proofs treated as real artifacts with their freshness tracked, and a bounded run &rarr; write-back &rarr; re-run &rarr; mark-verified lifecycle that&rsquo;s approval-gated, not turned loose. No off-the-shelf tool does this. That&rsquo;s why I had to build it.</p>
-
-        <p id="whats-mine"><span class="label">What&rsquo;s mine.</span> Nearly all of ECO is my design &mdash; the Tauri desktop shell, the Rust backend, the SvelteKit front end, the SQLite store with full-text search, the indexer that reads my existing folders without moving a file. The code itself is AI-written under my direction and my checkpoints; the architecture, the calls, and the governance are mine. It all runs local, on my machine, not someone&rsquo;s cloud. And the governance itself, which I&rsquo;ve now built twice. The first version was the rulebook written as Markdown docs and prompts, with the AI told to read them and behave. That works partway &mdash; but rules in a doc can be skipped, forgotten, or argued around. So the version I&rsquo;m building now codifies the same rules into the Rust itself: the sign-offs, the tier classification, the bounded lifecycle, the proposal-to-write-back flow, the freshness tracking. Once it&rsquo;s in the binary, the agent can&rsquo;t talk its way past it &mdash; it has to go through it. Rewriting governance from &ldquo;Markdown the AI is supposed to follow&rdquo; to &ldquo;Rust the AI has to pass through&rdquo; is slow work, and it&rsquo;s why ECO is still going.</p>
-
-        <p id="wired-in"><span class="label">What I wired in.</span> Less than the other projects &mdash; but not nothing. There&rsquo;s a provider layer so ECO can run against mock AI or live, and swap between vendors: Anthropic is the daily driver, but there&rsquo;s a proven live run on OpenAI too (VERIF-182), so this one isn&rsquo;t tied to a single AI company. Past that, it&rsquo;s all original &mdash; my design, built by AI under my checkpoints, not glued together from other people&rsquo;s tools.</p>
-
-        <p id="how-i-ran-it"><span class="label">How I ran it.</span> The agent setup isn&rsquo;t a quirk &mdash; it&rsquo;s the shape complex work needs. Any well-run shop splits it the same way: someone plans, someone builds, and the boss signs off on both. ECO is the desktop app that lets me work like that with AI. I run two of Anthropic&rsquo;s agents under role prompts I wrote &mdash; one I named Talos for strategy and audit, one I named Effy for the build &mdash; and I hold final say over both. The agents are off the shelf; the framework around them &mdash; the roles, the separation, the rules, the checkpoints &mdash; is mine. Every task goes through that checkpoint discipline, and the pre-commit review is a hard stop. Nothing gets committed without my sign-off.</p>
-
-        <p id="receipts"><span class="label">The receipts.</span> 267 commits since March, and a verification log that&rsquo;s the real spine of the project &mdash; 450-plus numbered proofs, each one noting what it does and doesn&rsquo;t prove. One example of the discipline: I cut the app&rsquo;s main screen from ~8,912 lines down to ~1,959 today, across thirteen passes, each one regression-proven before I moved to the next, no &ldquo;trust me, it still works.&rdquo; Those receipts live in the verification log, not in git history. And the whole governed lifecycle &mdash; run, write back, re-run, mark verified &mdash; is proven end to end, under both a mock AI and a live one. That&rsquo;s not a demo. That&rsquo;s the thing working.</p>
-
-        <p id="why-it-counts"><span class="label">Why it counts.</span> It&rsquo;s the biggest thing I&rsquo;ve built, it&rsquo;s not done, and it&rsquo;s solving a problem I couldn&rsquo;t find solved anywhere else. Building it is how I learned to keep a long, multi-agent job coherent, keep a human in charge of every call, and prove what&rsquo;s been checked instead of hoping. If a client&rsquo;s got a build that&rsquo;s going to run for months across more than one AI, this is the kind of control I bring to it.</p>
-
-        <p class="techline">Tauri, Rust, SvelteKit, and SQLite with full-text search.</p>
-
-        <p class="closing-contact"><strong>Got a long build that has to stay coherent across more than one AI?</strong> <a href="work.html">Let&rsquo;s talk about the job &rarr;</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <span>© 2026 TYRIEN JONES</span>
-      <span>SELF-HOSTED · GERALDTON, WA</span>
+    <div class="doc-sec" id="plain-terms" style="scroll-margin-top:24px">
+      <span class="lbl lbl-lg" style="color:oklch(0.78 0.15 52)">00 · IN PLAIN TERMS</span>
+      <p class="lede">ECO is a dedicated workspace for getting real software built with AI — with you in charge the whole way. It keeps the AI on a leash so it can take on long, complicated jobs without wandering off or quietly breaking things, and nothing it does counts until you&rsquo;ve checked it and signed off.</p>
+      <p style="color:oklch(0.78 0.01 75)">My biggest project, and the one I&rsquo;m proudest of. It&rsquo;s not finished, and I&rsquo;m not going to pretend it is. That&rsquo;s the point of putting it here.</p>
     </div>
-  </footer>
+
+    <div class="doc-sec" id="the-job" style="scroll-margin-top:24px">
+      <header><span class="n">01</span><h2>The job</h2></header>
+      <p>When a build runs long and the work gets complex, it goes sideways in the same few ways every time. Different AI models end up touching the same code — and it still has to read like one hand wrote it. The truth about where things stand gets scattered across chat windows that vanish the moment you close them. And the second you let the agents run themselves, you lose the thread on what was actually checked.</p>
+      <div class="panel">
+        <div class="panel-bar"><span class="lbl">WHAT ECO HOLDS IN LINE</span></div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);font-size:16px;line-height:1.5">
+          <span style="padding:14px 0 14px 22px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:oklch(0.78 0.15 52);border-bottom:1px solid oklch(0.25 0.006 70)">A</span><span style="padding:14px 22px 14px 0;border-bottom:1px solid oklch(0.25 0.006 70)">One verified place where the truth lives.</span>
+          <span style="padding:14px 0 14px 22px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:oklch(0.78 0.15 52);border-bottom:1px solid oklch(0.25 0.006 70)">B</span><span style="padding:14px 22px 14px 0;border-bottom:1px solid oklch(0.25 0.006 70)">The human as the final word on every commit, every decision, every risk.</span>
+          <span style="padding:14px 0 14px 22px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:oklch(0.78 0.15 52);border-bottom:1px solid oklch(0.25 0.006 70)">C</span><span style="padding:14px 22px 14px 0;border-bottom:1px solid oklch(0.25 0.006 70)">Verification proofs treated as real artifacts, with their freshness tracked.</span>
+          <span style="padding:14px 0 14px 22px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:oklch(0.78 0.15 52)">D</span><span style="padding:14px 22px 14px 0">A bounded run → write-back → re-run → mark-verified lifecycle that&rsquo;s approval-gated, not turned loose.</span>
+        </div>
+      </div>
+      <p style="font-size:22px;font-weight:600;color:oklch(0.95 0.008 80)">No off-the-shelf tool does this. That&rsquo;s why I had to build it.</p>
+    </div>
+
+    <div class="doc-sec" id="whats-mine" style="scroll-margin-top:24px">
+      <header><span class="n">02</span><h2>What&rsquo;s mine</h2></header>
+      <p>Nearly all of ECO is my design. The code itself is AI-written under my direction and my checkpoints; the architecture, the calls, and the governance are mine. It all runs local, on my machine, not someone&rsquo;s cloud.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:oklch(0.29 0.006 70);border:1px solid oklch(0.29 0.006 70)">
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:oklch(0.19 0.006 70)">
+          <span class="lbl" style="text-transform:none">GOVERNANCE v1 · BEFORE</span>
+          <span style="font-size:20px;font-weight:600;line-height:1.3">Markdown the AI is supposed to follow.</span>
+          <span style="font-size:15px;line-height:1.55;color:oklch(0.72 0.01 75)">Rules in a doc can be skipped, forgotten, or argued around.</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:oklch(0.22 0.008 60)">
+          <span class="lbl" style="text-transform:none;color:oklch(0.78 0.15 52)">GOVERNANCE v2 · NOW</span>
+          <span style="font-size:20px;font-weight:600;line-height:1.3">Rust the AI has to pass through.</span>
+          <span style="font-size:15px;line-height:1.55;color:oklch(0.78 0.01 75)">Once it&rsquo;s in the binary, the agent can&rsquo;t talk its way past it — it has to go through it.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-sec" id="wired-in" style="scroll-margin-top:24px">
+      <header><span class="n">03</span><h2>Wired in</h2></header>
+      <p>Less than the other projects — but not nothing. There&rsquo;s a provider layer so ECO can run against mock AI or live, and swap between vendors: Anthropic is the daily driver, but there&rsquo;s a proven live run on OpenAI too (VERIF-182), so this one isn&rsquo;t tied to a single AI company.</p>
+      <div class="panel">
+        <div class="panel-bar"><span class="lbl">MATERIALS LIST</span></div>
+        <div class="sheet" style="grid-template-columns:200px minmax(0,1fr) 150px">
+          <div class="s-name">Tauri</div>
+          <div class="s-desc">Desktop shell</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">Rust</div>
+          <div class="s-desc">Backend + codified governance</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">SvelteKit</div>
+          <div class="s-desc">Front end</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">SQLite + FTS</div>
+          <div class="s-desc">Store with full-text search; indexer that reads existing folders without moving a file</div>
+          <div class="row-end"><span class="tag-own">MY DESIGN</span></div>
+          <div class="s-name">Anthropic · OpenAI</div>
+          <div class="s-desc">Model providers, swappable</div>
+          <div><span class="tag-wired">WIRED IN</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-sec" id="how-i-ran-it" style="scroll-margin-top:24px">
+      <header><span class="n">04</span><h2>How I ran it</h2></header>
+      <p>The agent setup isn&rsquo;t a quirk — it&rsquo;s the shape complex work needs. Any well-run shop splits it the same way: someone plans, someone builds, and the boss signs off on both. The agents are off the shelf; the framework around them — the roles, the separation, the rules, the checkpoints — is mine.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid oklch(0.29 0.006 70)">
+        <div style="padding:22px;display:flex;flex-direction:column;gap:8px;border-right:1px solid oklch(0.29 0.006 70)"><span class="lbl">STRATEGY &amp; AUDIT</span><span style="font-size:24px;font-weight:700">Talos</span></div>
+        <div style="padding:22px;display:flex;flex-direction:column;gap:8px;border-right:1px solid oklch(0.29 0.006 70)"><span class="lbl">THE BUILD</span><span style="font-size:24px;font-weight:700">Effy</span></div>
+        <div style="padding:22px;display:flex;flex-direction:column;gap:8px;background:oklch(0.22 0.008 60)"><span class="lbl" style="color:oklch(0.78 0.15 52)">FINAL SAY</span><span style="font-size:24px;font-weight:700">Me</span></div>
+      </div>
+      <p style="font-size:22px;font-weight:600;color:oklch(0.95 0.008 80)">The pre-commit review is a hard stop. Nothing gets committed without my sign-off.</p>
+    </div>
+
+    <div class="doc-sec" id="receipts" style="scroll-margin-top:24px">
+      <header><span class="n">05</span><h2>The receipts</h2></header>
+      <p>A verification log that&rsquo;s the real spine of the project — each proof noting what it does and doesn&rsquo;t prove. Those receipts live in the verification log, not in git history.</p>
+      <div class="panel">
+        <div class="panel-bar"><span class="lbl">LEDGER</span><span class="lbl">SOURCE: VERIFICATION LOG</span></div>
+        <div style="display:grid;grid-template-columns:180px minmax(0,1fr);font-size:16px;line-height:1.45">
+          <span style="padding:18px 22px;font-weight:800;font-stretch:85%;font-size:32px;border-bottom:1px solid oklch(0.25 0.006 70)">450+</span><span style="padding:18px 22px 18px 0;align-self:center;color:oklch(0.82 0.01 75);border-bottom:1px solid oklch(0.25 0.006 70)">numbered proofs in the verification log</span>
+          <span style="padding:18px 22px;font-weight:800;font-stretch:85%;font-size:32px;border-bottom:1px solid oklch(0.25 0.006 70)">677</span><span style="padding:18px 22px 18px 0;align-self:center;color:oklch(0.82 0.01 75);border-bottom:1px solid oklch(0.25 0.006 70)">Rust tests passing</span>
+          <span style="padding:18px 22px;font-weight:800;font-stretch:85%;font-size:32px;border-bottom:1px solid oklch(0.25 0.006 70)">267</span><span style="padding:18px 22px 18px 0;align-self:center;color:oklch(0.82 0.01 75);border-bottom:1px solid oklch(0.25 0.006 70)">commits since March</span>
+          <span style="padding:18px 22px;font-weight:800;font-stretch:85%;font-size:32px;color:oklch(0.78 0.15 52)">End to end</span><span style="padding:18px 22px 18px 0;align-self:center;color:oklch(0.82 0.01 75)">Run → write back → re-run → mark verified, proven under both a mock AI and a live one</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;padding:28px;border:1px solid oklch(0.29 0.006 70)">
+        <span class="lbl">ONE EXAMPLE OF THE DISCIPLINE · MAIN SCREEN</span>
+        <div style="display:flex;align-items:center;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-stretch:80%;font-size:56px;line-height:1;color:oklch(0.62 0.01 75);text-decoration:line-through;text-decoration-thickness:2px">~8,912</span><span style="font-size:13px;color:oklch(0.62 0.01 75)">lines, before</span></div>
+          <span style="font-size:32px;color:oklch(0.78 0.15 52)">→</span>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-stretch:80%;font-size:56px;line-height:1">~1,959</span><span style="font-size:13px;color:oklch(0.72 0.01 75)">lines, today</span></div>
+          <span style="margin-left:auto;max-width:240px;font-size:15px;line-height:1.5;color:oklch(0.78 0.01 75)">Thirteen passes, each one regression-proven before the next. No &ldquo;trust me, it still works.&rdquo;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-sec" id="why-it-counts" style="scroll-margin-top:24px">
+      <header><span class="n">06</span><h2>Why it counts</h2></header>
+      <p>It&rsquo;s the biggest thing I&rsquo;ve built, it&rsquo;s not done, and it&rsquo;s solving a problem I couldn&rsquo;t find solved anywhere else. Building it is how I learned to keep a long, multi-agent job coherent, keep a human in charge of every call, and prove what&rsquo;s been checked instead of hoping.</p>
+      <p style="font-size:24px;line-height:1.4;font-weight:600;color:oklch(0.95 0.008 80)">If a client&rsquo;s got a build that&rsquo;s going to run for months across more than one AI, this is the kind of control I bring to it.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta in-panel">
+  <div class="cta-copy">
+    <span class="lbl lbl-lg">WORK WITH ME</span>
+    <span class="cta-q">Got a long build that has to stay coherent across more than one AI?</span>
+  </div>
+  <a class="btn btn-accent" href="work.html">LET&rsquo;S TALK ABOUT THE JOB →</a>
+</section>
+
+<nav class="pn">
+  <a href="portfolio.html"><span class="lbl">← BACK</span><b>Portfolio</b></a>
+  <a href="lily.html"><span class="lbl">NEXT SHEET →</span><b>L.I.LY — the little sister</b></a>
+</nav>
+
+<footer class="site-foot">
+  <span>© 2026 TYRIEN JONES</span>
+  <span class="links">
+    <a href="https://github.com/tyrienjones-tech">GITHUB</a>
+    <a href="mailto:tyrienjones.tech@gmail.com">EMAIL</a>
+    <a href="this-site.html">THIS SITE</a>
+  </span>
+  <span>SELF-HOSTED · GERALDTON, WA</span>
+</footer>
 
 </body>
 </html>

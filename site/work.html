@@ -1,78 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>Work With Me — Tyrien Jones</title>
-  <meta name="description" content="I haven't had a paid client yet — I'm after the first one. I'll show you working software instead of talking about it." />
-  <link rel="stylesheet" href="assets/css/site.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Work With Me — Tyrien Jones</title>
+<meta name="description" content="I haven't had a paid client yet — I'm after the first one. No fake reviews, no borrowed logos: when I've done paid work, you'll see it here.">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="theme-work">
+<body>
 
-  <div class="bg-texture" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <span class="brand-name">TYRIEN JONES</span>
+    <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="eco.html">ECO</a>
+    <a href="lily.html">LILY</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="btn-work" style="background:oklch(0.7 0.18 48)" aria-current="page">Work with me</a>
+  </nav>
+</header>
 
-  <!-- ===== Shared glass nav ===== -->
-  <header class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-name">TYRIEN JONES</span>
-      <span class="brand-sub">AI ENGINEER · FOREMAN</span>
+<section class="hero" style="align-items:start;border-bottom:1px solid oklch(0.27 0.006 70)">
+  <div style="display:flex;flex-direction:column;gap:36px">
+    <span class="lbl" style="color:oklch(0.78 0.15 52)">WORK WITH ME</span>
+    <h1 class="display" style="font-weight:800;font-stretch:78%;font-size:clamp(75px,8.96vw,150px);line-height:.85;letter-spacing:0">Let&rsquo;s talk about the job</h1>
+    <p class="lede" style="max-width:680px;color:oklch(0.95 0.008 80)">I&rsquo;ll be straight with you: I haven&rsquo;t had a paid client yet. I&rsquo;m after the first one.</p>
+    <p style="max-width:640px">No fake reviews, no borrowed logos, no made-up &ldquo;trusted by&rdquo; line on this page — when I&rsquo;ve done paid work, you&rsquo;ll see it here, and not before.</p>
+  </div>
+  <div class="panel">
+    <div class="panel-bar" style="padding:14px 22px"><span class="lbl">CONTACT</span></div>
+    <div style="display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-bottom:1px solid oklch(0.25 0.006 70)">
+      <span class="lbl">LOCATION</span>
+      <span style="font-size:22px;font-weight:700">Geraldton, Western Australia</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-bottom:1px solid oklch(0.25 0.006 70)">
+      <span class="lbl">EMAIL</span>
+      <span style="font-size:22px;font-weight:700">Email address</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-bottom:1px solid oklch(0.25 0.006 70)">
+      <span class="lbl">GITHUB</span>
+      <span style="font-size:22px;font-weight:700">tyrienjones-tech</span>
+    </div>
+    <div style="display:flex;gap:12px;padding:22px">
+      <a class="btn btn-accent" href="mailto:tyrienjones.tech@gmail.com" style="flex:1;justify-content:center">EMAIL ME →</a>
+      <a class="btn btn-ghost" href="https://github.com/tyrienjones-tech" style="flex:1;justify-content:center">GITHUB</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec split s-12" style="padding-top:120px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <h2>If you&rsquo;ve got a job</h2>
+    <p style="font-size:18px;line-height:1.5;color:oklch(0.68 0.01 75)">What I can do is show you working software instead of talking about it.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:oklch(0.29 0.006 70);border:1px solid oklch(0.29 0.006 70)">
+    <a href="eco.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:200px;padding:28px;background:oklch(0.21 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">01</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:28px;font-weight:700;line-height:1.15">A desktop tool</span>
+        <span style="font-size:14px;color:oklch(0.78 0.15 52);font-weight:600">See ECO →</span>
+      </div>
     </a>
-    <input type="checkbox" id="nav-state" class="nav-toggle-state" hidden />
-    <label for="nav-state" class="nav-toggle" aria-label="Toggle menu">≡</label>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">HOME</a>
-      <a href="eco.html">ECO</a>
-      <a href="lily.html">LILY</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="about.html">ABOUT</a>
-      <a href="work.html" aria-current="page">WORK WITH ME</a>
-      <a href="this-site.html">THIS SITE</a>
-    </nav>
-    <div class="nav-icons">
-      <span class="nav-version" title="Site version 1.0">v1.0</span>
-      <a href="https://github.com/tyrienjones-tech" aria-label="GitHub" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-      </a>
-      <a href="mailto:tyrienjones.tech@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-head">
-      <div class="wrap">
-        <p class="eyebrow">WORK WITH ME</p>
-        <h1>Let&rsquo;s talk about the job</h1>
+    <a href="lily.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:200px;padding:28px;background:oklch(0.21 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">02</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:28px;font-weight:700;line-height:1.15">An AI integration</span>
+        <span style="font-size:14px;color:oklch(0.78 0.15 52);font-weight:600">See L.I.LY →</span>
       </div>
-    </section>
-
-    <section class="prose">
-      <div class="wrap">
-        <p class="lead">I&rsquo;ll be straight with you: I haven&rsquo;t had a paid client yet. I&rsquo;m after the first one. No fake reviews, no borrowed logos, no made-up &ldquo;trusted by&rdquo; line on this page &mdash; when I&rsquo;ve done paid work, you&rsquo;ll see it here, and not before.</p>
-        <p>What I can do is show you working software instead of talking about it. If you&rsquo;ve got a job &mdash; a desktop tool, an AI integration, automation for a small business, an audit of code someone left you &mdash; I&rsquo;ll show you the code, walk you through how I&rsquo;d run it, and tell you straight what I can and can&rsquo;t do.</p>
-
-        <div class="btn-row">
-          <a class="btn btn-primary" href="mailto:tyrienjones.tech@gmail.com">EMAIL ME
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-secondary" href="https://github.com/tyrienjones-tech" rel="me noopener">GITHUB
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-          </a>
-        </div>
-
-        <p class="closing-contact"><strong>Geraldton, Western Australia</strong> &middot; <a href="mailto:tyrienjones.tech@gmail.com">tyrienjones.tech@gmail.com</a> &middot; GitHub: <a href="https://github.com/tyrienjones-tech">tyrienjones-tech</a></p>
+    </a>
+    <a href="portfolio.html#pc-health" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:200px;padding:28px;background:oklch(0.21 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">03</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:28px;font-weight:700;line-height:1.15">Automation for a small business</span>
+        <span style="font-size:14px;color:oklch(0.78 0.15 52);font-weight:600">See PC_HEALTH →</span>
       </div>
-    </section>
-  </main>
+    </a>
+    <a href="portfolio.html#ets2la" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:200px;padding:28px;background:oklch(0.21 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">04</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:28px;font-weight:700;line-height:1.15">An audit of code someone left you</span>
+        <span style="font-size:14px;color:oklch(0.78 0.15 52);font-weight:600">See ETS2LA →</span>
+      </div>
+    </a>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="wrap">
-      <span>© 2026 TYRIEN JONES</span>
-      <span>SELF-HOSTED · GERALDTON, WA</span>
+<section class="sec">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid oklch(0.7 0.18 48)">
+    <div style="display:flex;flex-direction:column;gap:14px;padding:32px 32px 0 0;border-right:1px solid oklch(0.29 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">STEP 1</span>
+      <span style="font-size:30px;font-weight:700;line-height:1.15">I&rsquo;ll show you the code.</span>
+      <span style="font-size:16px;color:oklch(0.68 0.01 75)">Not a pitch deck.</span>
     </div>
-  </footer>
+    <div style="display:flex;flex-direction:column;gap:14px;padding:32px 32px 0 32px;border-right:1px solid oklch(0.29 0.006 70)">
+      <span class="lbl" style="letter-spacing:.12em">STEP 2</span>
+      <span style="font-size:30px;font-weight:700;line-height:1.15">I&rsquo;ll walk you through how I&rsquo;d run it.</span>
+      <span style="font-size:16px;color:oklch(0.68 0.01 75)">The crew, the checkpoints, the sign-offs.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;padding:32px 0 0 32px">
+      <span class="lbl" style="letter-spacing:.12em;color:oklch(0.78 0.15 52)">STEP 3</span>
+      <span style="font-size:30px;font-weight:700;line-height:1.15">I&rsquo;ll tell you straight what I can and can&rsquo;t do.</span>
+      <span style="font-size:16px;color:oklch(0.68 0.01 75)">Before you spend a cent.</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <span>© 2026 TYRIEN JONES</span>
+  <span class="links">
+    <a href="https://github.com/tyrienjones-tech">GITHUB</a>
+    <a href="mailto:tyrienjones.tech@gmail.com">EMAIL</a>
+    <a href="this-site.html">THIS SITE</a>
+  </span>
+  <span>SELF-HOSTED · GERALDTON, WA</span>
+</footer>
 
 </body>
 </html>
